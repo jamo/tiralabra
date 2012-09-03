@@ -16,3 +16,8 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+#latex
+.aux
+.log
+.synctex.gz
