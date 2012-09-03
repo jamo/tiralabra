@@ -19,28 +19,32 @@ doc/
 
 #latex
 *.aux
-*.glo
-*.idx
-*.log
-*.toc
-*.ist
-*.acn
-*.acr
-*.alg
 *.bbl
 *.blg
 *.dvi
+*.fdb_latexmk
 *.glg
+*.glo
 *.gls
+*.idx
 *.ilg
 *.ind
+*.ist
 *.lof
+*.log
 *.lot
+*.nav
+*.nlo
+*.out
+*.pdfsync
+*.ps
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
 *.maf
 *.mtc
-*.mtc1
-*.out
-*.synctex.gz
+*.mtc0
 
 # Mac finder files and hidden folders
 .DS_Store
