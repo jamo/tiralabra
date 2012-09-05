@@ -66,10 +66,7 @@ class BinaryHeap
       heapify_down childs_index
     end
   end
-  #smaller_than_children - pienempi kui lapset
-    #i 3 - lapset 2,1  false
-  #onko isompia lapsia
-    #i 3 - lapset 2,1 => ei
+
   def has_bigger_childen? index
     return false if @heap.length < 2 * index + 2 #ei lapsia 
     return @heap[index] < @heap[2*index +1] if @heap.length == 2 * index + 2 #yksi lapsi
