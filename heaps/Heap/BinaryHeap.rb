@@ -1,9 +1,9 @@
 require 'pp'
 class BinaryHeap
-#minimi binomikeko
+#maksimi binomikeko
 #
 #STAUS: Keon luonti ja Heapify toimii - uuden alkion tuonti kekoon siis
-#       Keosta poistaminen ei vielä mahdollista.
+#       Keosta poistaminen toimii lähes kokonaan - EI KAI ENÄÄ Välillä left tuottaa has_bigger_children? metosta ArgumentError: wrong number of arguments (0 for 1)
 
   attr_accessor :heap
   @dbg = false
@@ -18,17 +18,17 @@ class BinaryHeap
     end
   end
 
-  def parent i
-    @heap[(i/2).floor]
-  end
+  #def parent i
+  #  @heap[(i/2).floor]
+  #end
   
-  def left i
-    @heap[2*i]
-  end
+  #def left i
+  #  @heap[2*i+1]
+  #end
   
-  def right i
-    @heap[2*i+1]
-  end
+  #def right i
+  #  @heap[2*i+2]
+  #end
 
   def heapify_up index
     if index != 0 #on parent olemassa TODO 
@@ -60,12 +60,31 @@ class BinaryHeap
   end
   
   def heapify_down index
-#   jos toinen lapsista isompi kuin @heap[index] 
-#     valitaan niistä isompi
-#     vaihdentaan näitä sen kanssa
-#     ja heapify_down sen indeksille  
-  end  
-
-  def has_bigger_childen? index
-    if left(index) and not right(index) #on vain yksi lapsi
+    if has_bigger_childen? index
+      childs_index = get_index_of_biggest_child index
+      swap index, childs_index
+      heapify_down childs_index
+    end
   end
+  #smaller_than_children - pienempi kui lapset
+    #i 3 - lapset 2,1  false
+  #onko isompia lapsia
+    #i 3 - lapset 2,1 => ei
+  def has_bigger_childen? index
+    return false if @heap.length < 2 * index + 2 #ei lapsia 
+    return @heap[index] < @heap[2*index +1] if @heap.length == 2 * index + 2 #yksi lapsi
+    pp "kaksi lasta index: #{index} Keon pituus: #{@heap.length}"
+    left_child = @heap[2*index+1]
+    right_child = @heap[2*index+2]
+    return @heap[index] < [left_child, right_child].max
+  end
+  
+  def get_index_of_biggest_child index
+    return 2 * index + 1 if @heap.length == 2 * index + 2 #yksi lapsi
+    if @heap[2 * index + 1] > @heap[2 * index + 2]
+      return 2 * index + 1
+    else
+      return 2 * index + 2
+    end
+  end
+end
