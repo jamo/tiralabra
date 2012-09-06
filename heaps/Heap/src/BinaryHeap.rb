@@ -18,6 +18,36 @@ class BinaryHeap
     end
   end
 
+  def inc_key new_value, index
+    if @heap[index] < new_value
+      @heap[index] = new_value
+      heapify_up index
+    end
+  end
+
+  def dec_key new_value, index
+    if @heap[index] > new_value
+      @heap[index] = new_value
+      heapify_down index
+    end
+  end
+
+  def remove_max
+    deleted = @heap.delete_at 0
+    if @heap.length > 0
+      last_one = @heap.pop
+      @heap.insert 0, last_one
+      heapify_down 0
+    end
+    deleted
+  end
+
+  #debuggausta/debuggausta varten - joo ei rubymäinen ratkaisu
+  def get_heap
+    @heap
+  end
+
+
   #def parent i
   #  @heap[(i/2).floor]
   #end
@@ -30,6 +60,8 @@ class BinaryHeap
   #  @heap[2*i+2]
   #end
 
+  private
+
   def heapify_up index
     if index != 0 #on parent olemassa TODO 
       parent_index = (index/2).floor
@@ -40,24 +72,12 @@ class BinaryHeap
     end    
   end
   
-  #debuggausta varten
-  def get_heap
-    @heap
-  end
-    
+
   def swap(first_index, second_index)
     @heap[first_index], @heap[second_index] = @heap[second_index], @heap[first_index]
   end
 
-  def remove_max 
-    deleted = @heap.delete_at 0
-    if @heap.length > 0
-      last_one = @heap.pop
-      @heap.insert 0, last_one
-      heapify_down 0
-    end
-    deleted
-  end
+
 
   def heapify_down index
     if has_bigger_childen? index
@@ -84,18 +104,6 @@ class BinaryHeap
     end
   end
   
-  def inc_key new_value, index
-    if @heap[index] < new_value
-      @heap.insert index, new_value
-      heapify_up index
-    end
-  end
-  
-  def dec_key new_value, index
-    if @heap[index] > new_value
-      @heap.insert index, new_value
-      heapify_down index
-    end
-  end
+
  
 end

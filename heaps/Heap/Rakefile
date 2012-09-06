@@ -1,0 +1,11 @@
+require 'rspec/core/rake_task'
+
+  namespace :default do
+    task :default do
+      require 'default'
+      CoverMe.complete!
+    end
+
+    task :default => %w{ rake:spec report }
+
+  end
