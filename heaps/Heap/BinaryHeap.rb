@@ -3,7 +3,7 @@ class BinaryHeap
 #maksimi binomikeko
 #
 #STAUS: Keon luonti ja Heapify toimii - uuden alkion tuonti kekoon siis
-#       Keosta poistaminen toimii lähes kokonaan - EI KAI ENÄÄ Välillä left tuottaa has_bigger_children? metosta ArgumentError: wrong number of arguments (0 for 1)
+#       Keosta poistaminen toimii
 
   attr_accessor :heap
   @dbg = false
@@ -58,7 +58,7 @@ class BinaryHeap
     end
     deleted
   end
-  
+
   def heapify_down index
     if has_bigger_childen? index
       childs_index = get_index_of_biggest_child index
@@ -70,12 +70,11 @@ class BinaryHeap
   def has_bigger_childen? index
     return false if @heap.length < 2 * index + 2 #ei lapsia 
     return @heap[index] < @heap[2*index +1] if @heap.length == 2 * index + 2 #yksi lapsi
-    pp "kaksi lasta index: #{index} Keon pituus: #{@heap.length}"
-    left_child = @heap[2*index+1]
-    right_child = @heap[2*index+2]
+    pp "kaksi lasta index: #{index} Keon pituus: #{@heap.length}" if @dbg
+    left_child, right_child = @heap[2*index+1], @heap[2*index+2]
     return @heap[index] < [left_child, right_child].max
   end
-  
+
   def get_index_of_biggest_child index
     return 2 * index + 1 if @heap.length == 2 * index + 2 #yksi lapsi
     if @heap[2 * index + 1] > @heap[2 * index + 2]
@@ -84,4 +83,19 @@ class BinaryHeap
       return 2 * index + 2
     end
   end
+  
+  def inc_key new_value, index
+    if @heap[index] < new_value
+      @heap.insert index, new_value
+      heapify_up index
+    end
+  end
+  
+  def dec_key new_value, index
+    if @heap[index] > new_value
+      @heap.insert index, new_value
+      heapify_down index
+    end
+  end
+ 
 end
