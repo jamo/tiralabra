@@ -6,22 +6,23 @@
 \title{TiRa labra - Määrittelydokumentti} 
 \author{Jarmo Isotalo}
 \maketitle
-\begin{enumerate}
-\item Toteutettavat algoritmit
+
+\section{Toteutettavat algoritmit}
 
 Toteutan työssäni 3 kekoa, binäärikeon, binomikeon ja d-ary keon
 
-\item Miksi valitsin nämä algoritmit
+\section{Miksi valitsin nämä algoritmit}
 
 Kyseisten algoritmien valinnassa ei ollut mitään kummempia syitä. Kekojen toteutus vaikutti
 kiinnostavalta, sillä se ei vaikuta liian hankalalta, ja soveltunee kohtuu hyvin toteutettavaksi rubyllä.
 
-\item Mitä syötteitä ohjelma saa ja miten näitä käytetään\\
+\section{Mitä syötteitä ohjelma saa ja miten näitä käytetään}
 Syötteiden muoto tarkentuu myöhemmin. 
 Niille voinee antaa syötteitä interaktiivisesta ja luultavasti parametreinä.
 
-\item Tavoitteena olevat aika- ja tilavaativuudet (m.m. O-analyysi)
+\section{Tavoitteena olevat aika- ja tilavaativuudet (m.m. O-analyysi)}
 
+\subsection{Aikavaatimus}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
 &Binary Heap & Binomial heap & D-ary \\\hline
@@ -30,9 +31,18 @@ Delete  & $O (\log n)$ & $O (\log n)$ & ?\\\hline
 Build & $O (n \log n)$ & $O (\log n)$ & $O (n)$\\\hline
 \end{tabular}
 
+\subsection{Tilavaatimus}
+Tilavaativuuden arvoit eivät ole ihan hatusta heitettyjä, mutta ne riippuvat hyvin pitkälti toteutuksesta, joten rohkenen jättää ne melko avoimiksi. Ne toki tarkentuvat kun menille selviää kekojen  ja niiden metodien toteutustapa\\
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+&Binary Heap & Binomial heap & D-ary \\\hline
+Insert & $O (\log n)$ & $O (\log n)$ & ?\\\hline
+Delete  & $O (\log n)$ & $O (\log n)$ & ?\\\hline
+Build & $O (\log n)$ & $O (\log n)$ & $O (n)$\\\hline
+\end{tabular}
 
-\item Lähteet\\
+
+\section{Lähteet}
 \url{https://en.wikipedia.org/wiki/Heap_(data_structure)}
-\end{enumerate}
 
 \end{document}

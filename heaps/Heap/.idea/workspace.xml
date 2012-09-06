@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fc405fe-3d26-471b-8f97-19601e482ff5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BinaryHeap.rb" afterPath="$PROJECT_DIR$/src/BinaryHeap.rb" />
-    </list>
+    <list default="true" id="3fc405fe-3d26-471b-8f97-19601e482ff5" name="Default" comment="" />
     <ignored path="Heap.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +31,7 @@
       <file leaf-file-name="binary_heap_spec.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/binary_heap_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="38" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.6130653">
+            <state line="55" column="102" selection-start="1549" selection-end="1549" vertical-scroll-proportion="0.4723618">
               <folding>
                 <element signature="e#337#502#0" expanded="false" />
                 <element signature="e#552#784#0" expanded="false" />
@@ -419,7 +415,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25364667" sideWeight="0.21800947" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -489,13 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="132" selection-start="184" selection-end="184" vertical-scroll-proportion="0.3517588">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="43" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
@@ -512,7 +501,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/binary_heap_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="38" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.6130653">
+        <state line="55" column="102" selection-start="1549" selection-end="1549" vertical-scroll-proportion="0.4723618">
           <folding>
             <element signature="e#337#502#0" expanded="false" />
             <element signature="e#552#784#0" expanded="false" />
