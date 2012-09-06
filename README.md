@@ -15,6 +15,7 @@ Tässä oletetaan että koneessa on Ruby, mieluusti 1.9.3 (minulla käytössä 1
 ###Keon käyttäminen ja testien suorittaminen vaatii seuraavien gemien asennuksen:
 * rspec
 * simplecov
+
 `gem install simplecov rspec`
 
 ###Testien suorittaminen 
