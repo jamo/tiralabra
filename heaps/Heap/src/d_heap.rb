@@ -1,3 +1,5 @@
+require 'pp'
+require 'ruby-debug'
 class DHeap
   attr_accessor :heap, :d
 
@@ -27,7 +29,7 @@ class DHeap
 
   def child_index_right index
     #@d*index +@d
-    [@d*index+1,@heap.length].min
+    [@d*index+@d,@heap.length].min
   end
 
   def heapify *seed  #saadaan joko taulukko tai nkpl arvoja jotka päätyvät taulukkoon :)
@@ -74,21 +76,24 @@ class DHeap
 
   def heapify_down index
     if has_bigger_childen? index
-      childs_index = get_index_of_biggest_child index
-      return unless child_index # jos childs_index on nil tai false returnataan
-      swap index, childs_index
-      heapify_down childs_index
+      #pp index
+      indexes = get_index_of_biggest_child index
+      return unless indexes # jos childs_index on nil tai false returnataan
+      swap index, indexes
+      heapify_down indexes
     end
   end
 
   def has_bigger_childen? index
     childs = Hash.new
+    pp "vali #{child_index index}" if @dbg
     for i in child_index index
       childs[i] = @heap[i]
     end
-    if childs == []
+    if childs == [] or childs.values == nil or (child_index(index)).max == @heap.length
       return nil
     end
+    @heap[childs.values.max]
     @heap[index] < @heap[childs.values.max]
   end
 
