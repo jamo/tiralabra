@@ -5,12 +5,23 @@ class BinaryHeap
 #STAUS: Keon luonti ja Heapify toimii - uuden alkion tuonti kekoon siis
 #       Keosta poistaminen toimii
 
+
   attr_accessor :heap
   @dbg = false
   def initialize
     @heap = Array.new
   end
-  
+
+
+
+  #  Lisää kekoon arvoja/alkioita
+  #  Mikään ei perjaatteessa rajoita keossa olevien asioiden tyyppiä,
+  #  kunhan niitä voi vertailla keskenään (<, >, ==)
+  #
+  # * *Args*    :
+  #   - seed, Taulukko jossa
+  # * *Returns* :
+  #   -
   def heapify seed
     seed.each do |e|
       @heap.push e
@@ -34,15 +45,12 @@ class BinaryHeap
 
   def remove_max
     deleted = @heap.delete_at 0
-    if @heap.length > 0
-      last_one = @heap.pop
-      @heap.insert 0, last_one
-      heapify_down 0
-    end
+    @heap.insert 0, @heap.pop
+    heapify_down 0
     deleted
   end
 
-  #debuggausta/debuggausta varten - joo ei rubymäinen ratkaisu
+  #debuggausta/debuggausta varten - joo ei rubymäinen ratkaisu   ja ihan turha...
   def get_heap
     @heap
   end
