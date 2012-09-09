@@ -1,14 +1,13 @@
 require 'pp'
 
 class MyNode
-  #attr_accessor :data, :parent, :key, :child, :sibling, :degree
+  attr_accessor :data, :parent, :key, :child, :sibling, :degree
 
   def initialize data, key
     pp "created new node: data:#{data} key:#{key} from MyNode.rb"
-    #@data, @key = data = key
+    @data, @key = data = key
   end
 
-=begin
   def print_node
     result = String.new
     if parent
@@ -31,5 +30,4 @@ class MyNode
       result << "--- \t"
     end
   end
-=end
 end
