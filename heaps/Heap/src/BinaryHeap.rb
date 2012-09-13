@@ -111,7 +111,5 @@ class BinaryHeap
       return 2 * index + 2
     end
   end
-  
 
- 
 end

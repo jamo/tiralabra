@@ -12,6 +12,21 @@ describe DHeap do
     end
   end
 
+  describe "Using D-ary-Heap" do
+    it "sort element by heap property" do
+      @heap.heapify 1, 5, 5, 4, 3, 3
+      @heap.heap.should.eql? [5, 3, 5, 4, 1, 3]
+      while max = @heap.remove_max
+
+        pp max
+      end
+      pp @heap.heap
+
+    end
+
+  end
+
+=begin
   describe "Using BinaryHeap" do
     it "should sort elements as required by heap property " do
       @heap.heapify [1,2,3,4,5]
@@ -38,6 +53,7 @@ describe DHeap do
     end
 
   end
+
 
   describe "#inc_key" do
     it "should increase value of key and move it to proper place" do
@@ -68,5 +84,6 @@ describe DHeap do
     end
 
   end
+=end
 
 end

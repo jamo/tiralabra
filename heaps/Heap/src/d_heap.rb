@@ -40,9 +40,13 @@ class DHeap
   end
 
   def remove_max
+    return nil if heap.empty?
     deleted = @heap.delete_at 0
-    @heap.insert 0, @heap.pop
-    heapify_down 0
+    last_one = @heap.pop
+    if last_one
+      @heap.insert 0, last_one
+      heapify_down 0
+    end
     deleted
   end
 
@@ -66,10 +70,10 @@ class DHeap
 
   def heapify_up index
     if index != 0 #on parent olemassa TODO
-      parent_index = parent_index index
-      if @heap[parent_index] < @heap[index]
-        swap(index, parent_index)
-        heapify_up(parent_index)
+      parent_i = parent_index index
+      if @heap[parent_i] < @heap[index]
+        swap(index, parent_i)
+        heapify_up(parent_i)
       end
     end
   end
@@ -86,7 +90,6 @@ class DHeap
 
   def has_bigger_childen? index
     childs = Hash.new
-    pp "vali #{child_index index}" if @dbg
     for i in child_index index
       childs[i] = @heap[i]
     end
@@ -94,7 +97,7 @@ class DHeap
       return nil
     end
     @heap[childs.values.max]
-    @heap[index] < @heap[childs.values.max]
+    @heap[index] < childs.values.max
   end
 
   def get_index_of_biggest_child index
