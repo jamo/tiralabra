@@ -4,14 +4,15 @@ class DHeap
   attr_accessor :heap, :d
 
   @dbg = false
-  def initialize  d
+
+  def initialize d
     @heap, @d = Array.new, d
   end
 
 
-  def parent i
-    @heap[ parent_index i]
-  end
+  #def parent i   #Jääkööt tähän, vaikkakin turha
+  #  @heap[parent_index i]
+  #end
 
   def parent_index index
     return 0 if index == 0 ##poikkeustapaus - tähän ei pitäisi päätyä
@@ -19,20 +20,20 @@ class DHeap
   end
 
   def child_index index
-     child_index_left(index) .. child_index_right(index)   #n on keon solmujen määrä
+    child_index_left(index) .. child_index_right(index) #n on keon solmujen määrä
   end
 
   def child_index_left index
-    [@d * index + 1, @heap.length].min
+    [@d * index + 1, @heap.length-1].min
     #@d * ( index - 1 ) + 2
   end
 
   def child_index_right index
     #@d*index +@d
-    [@d*index+@d,@heap.length].min
+    [@d*index+@d, @heap.length-1].min
   end
 
-  def heapify *seed  #saadaan joko taulukko tai nkpl arvoja jotka päätyvät taulukkoon :)
+  def heapify *seed #saadaan joko taulukko tai nkpl arvoja jotka päätyvät taulukkoon :)
     seed.each do |e|
       @heap.push e
       heapify_up(@heap.length-1)
@@ -51,6 +52,7 @@ class DHeap
   end
 
   def inc_key new_value, index
+    return nil unless @heap[index]
     if @heap[index] < new_value
       @heap[index] = new_value
       heapify_up index
@@ -58,6 +60,7 @@ class DHeap
   end
 
   def dec_key new_value, index
+    return nil unless @heap[index]
     if @heap[index] > new_value
       @heap[index] = new_value
       heapify_down index
@@ -80,6 +83,7 @@ class DHeap
 
   def heapify_down index
     if has_bigger_childen? index
+      #puts "sisalla hepify_downissa #{index}"
       #pp index
       indexes = get_index_of_biggest_child index
       return unless indexes # jos childs_index on nil tai false returnataan
@@ -93,9 +97,9 @@ class DHeap
     for i in child_index index
       childs[i] = @heap[i]
     end
-    if childs == [] or childs.values == nil or (child_index(index)).max == @heap.length
-      return nil
-    end
+    nil if childs == [] or childs.values == nil or (child_index(index)).max == @heap.length
+
+
     @heap[childs.values.max]
     @heap[index] < childs.values.max
   end
@@ -108,5 +112,24 @@ class DHeap
     childs.key childs.values.max
   end
 
+  def empty?
+    heap.empty?
+  end
+
+  def not_empty?
+    !empty?
+  end
+
+  def clear!
+    heap.clear
+  end
+
+  def inject_heap new_heap
+    @heap = new_heap
+  end
+
+  def peak
+    @heap[0]
+  end
 
 end
