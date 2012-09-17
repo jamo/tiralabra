@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class DHeap - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>src/d_heap.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-child_index">#child_index</a>
+    
+    <li><a href="#method-i-child_index_left">#child_index_left</a>
+    
+    <li><a href="#method-i-child_index_right">#child_index_right</a>
+    
+    <li><a href="#method-i-clear-21">#clear!</a>
+    
+    <li><a href="#method-i-dec_key">#dec_key</a>
+    
+    <li><a href="#method-i-empty-3F">#empty?</a>
+    
+    <li><a href="#method-i-get_index_of_biggest_child">#get_index_of_biggest_child</a>
+    
+    <li><a href="#method-i-has_bigger_childen-3F">#has_bigger_childen?</a>
+    
+    <li><a href="#method-i-heapify">#heapify</a>
+    
+    <li><a href="#method-i-heapify_down">#heapify_down</a>
+    
+    <li><a href="#method-i-heapify_up">#heapify_up</a>
+    
+    <li><a href="#method-i-inc_key">#inc_key</a>
+    
+    <li><a href="#method-i-inject_heap">#inject_heap</a>
+    
+    <li><a href="#method-i-not_empty-3F">#not_empty?</a>
+    
+    <li><a href="#method-i-parent_index">#parent_index</a>
+    
+    <li><a href="#method-i-peak">#peak</a>
+    
+    <li><a href="#method-i-remove_max">#remove_max</a>
+    
+    <li><a href="#method-i-swap">#swap</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./BinaryHeap.html">BinaryHeap</a>
+  
+    <li><a href="./BinomialHeap.html">BinomialHeap</a>
+  
+    <li><a href="./DHeap.html">DHeap</a>
+  
+    <li><a href="./MyNode.html">MyNode</a>
+  
+    <li><a href="./Node.html">Node</a>
+  
+    <li><a href="./OldBinomialHeap.html">OldBinomialHeap</a>
+  
+    <li><a href="./Stack.html">Stack</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class DHeap</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-d" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">d</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-heap" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">heap</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(d)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Luodaan keon oleellisimat komponentit @@param d mikä keko tehdään</p>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">d</span>
+  <span class="ruby-ivar">@heap</span>, <span class="ruby-ivar">@d</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">d</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-child_index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">child_index</span><span
+            class="method-args">(index)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="child_index-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">child_index</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">child_index_left</span>(<span class="ruby-identifier">index</span>) <span class="ruby-operator">..</span> <span class="ruby-identifier">child_index_right</span>(<span class="ruby-identifier">index</span>) <span class="ruby-comment">#n on keon solmujen määrä</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- child_index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- child_index-method -->
+
+    
+      <div id="method-i-child_index_left" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">child_index_left</span><span
+            class="method-args">(index)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="child_index_left-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">child_index_left</span> <span class="ruby-identifier">index</span>
+  [<span class="ruby-ivar">@d</span> * <span class="ruby-identifier">index</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>].<span class="ruby-identifier">min</span>
+  <span class="ruby-comment">#@d * ( index - 1 ) + 2</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- child_index_left-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- child_index_left-method -->
+
+    
+      <div id="method-i-child_index_right" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">child_index_right</span><span
+            class="method-args">(index)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="child_index_right-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">child_index_right</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-comment">#@d*index +@d</span>
+  [<span class="ruby-ivar">@d</span>*<span class="ruby-identifier">index</span><span class="ruby-operator">+</span><span class="ruby-ivar">@d</span>, <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>].<span class="ruby-identifier">min</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- child_index_right-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- child_index_right-method -->
+
+    
+      <div id="method-i-clear-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">clear!</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="clear-21-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clear!</span>
+  <span class="ruby-identifier">heap</span>.<span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- clear-21-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- clear-21-method -->
+
+    
+      <div id="method-i-dec_key" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dec_key</span><span
+            class="method-args">(new_value, index)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="dec_key-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dec_key</span> <span class="ruby-identifier">new_value</span>, <span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">new_value</span>
+    <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>] = <span class="ruby-identifier">new_value</span>
+    <span class="ruby-identifier">heapify_down</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- dec_key-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- dec_key-method -->
+
+    
+      <div id="method-i-empty-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">empty?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="empty-3F-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">heap</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- empty-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- empty-3F-method -->
+
+    
+      <div id="method-i-get_index_of_biggest_child" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_index_of_biggest_child</span><span
+            class="method-args">(index)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_index_of_biggest_child-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_index_of_biggest_child</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">childs</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">child_index_left</span>(<span class="ruby-identifier">index</span>)<span class="ruby-operator">..</span><span class="ruby-identifier">child_index_right</span>(<span class="ruby-identifier">index</span>)
+    <span class="ruby-identifier">childs</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">i</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">childs</span>.<span class="ruby-identifier">key</span> <span class="ruby-identifier">childs</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_index_of_biggest_child-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_index_of_biggest_child-method -->
+
+    
+      <div id="method-i-has_bigger_childen-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">has_bigger_childen?</span><span
+            class="method-args">(index)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="has_bigger_childen-3F-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">has_bigger_childen?</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">childs</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">child_index</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-identifier">childs</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">i</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">childs</span> <span class="ruby-operator">==</span> [] <span class="ruby-keyword">or</span> <span class="ruby-identifier">childs</span>.<span class="ruby-identifier">values</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">or</span> (<span class="ruby-identifier">child_index</span>(<span class="ruby-identifier">index</span>)).<span class="ruby-identifier">max</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">length</span>
+
+
+  <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">childs</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">max</span>]
+  <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">childs</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- has_bigger_childen-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- has_bigger_childen-3F-method -->
+
+    
+      <div id="method-i-heapify" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">heapify</span><span
+            class="method-args">(*seed)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="heapify-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">heapify</span> *<span class="ruby-identifier">seed</span> <span class="ruby-comment">#saadaan joko taulukko tai nkpl arvoja jotka päätyvät taulukkoon :)</span>
+  <span class="ruby-identifier">seed</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">heapify_up</span>(<span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- heapify-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- heapify-method -->
+
+    
+      <div id="method-i-heapify_down" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">heapify_down</span><span
+            class="method-args">(index)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="heapify_down-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">heapify_down</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">has_bigger_childen?</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-comment">#puts &quot;sisalla hepify_downissa #{index}&quot;</span>
+    <span class="ruby-comment">#pp index</span>
+    <span class="ruby-identifier">indexes</span> = <span class="ruby-identifier">get_index_of_biggest_child</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">indexes</span> <span class="ruby-comment"># jos childs_index on nil tai false returnataan</span>
+    <span class="ruby-identifier">swap</span> <span class="ruby-identifier">index</span>, <span class="ruby-identifier">indexes</span>
+    <span class="ruby-identifier">heapify_down</span> <span class="ruby-identifier">indexes</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- heapify_down-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- heapify_down-method -->
+
+    
+      <div id="method-i-heapify_up" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">heapify_up</span><span
+            class="method-args">(index)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Korjataan kekoehto/tarkastetaan sen olemassaolo @param [Fixnum] index
+indeksi josta alaspäin kekoehto korjataan</p>
+          
+
+          
+          <div class="method-source-code" id="heapify_up-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">heapify_up</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-comment">#on parent olemassa TODO</span>
+    <span class="ruby-identifier">parent_i</span> = <span class="ruby-identifier">parent_index</span> <span class="ruby-identifier">index</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">parent_i</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>]
+      <span class="ruby-identifier">swap</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">parent_i</span>)
+      <span class="ruby-identifier">heapify_up</span>(<span class="ruby-identifier">parent_i</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- heapify_up-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- heapify_up-method -->
+
+    
+      <div id="method-i-inc_key" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">inc_key</span><span
+            class="method-args">(new_value, index)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="inc_key-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inc_key</span> <span class="ruby-identifier">new_value</span>, <span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">new_value</span>
+    <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>] = <span class="ruby-identifier">new_value</span>
+    <span class="ruby-identifier">heapify_up</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- inc_key-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- inc_key-method -->
+
+    
+      <div id="method-i-inject_heap" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">inject_heap</span><span
+            class="method-args">(new_heap)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="inject_heap-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inject_heap</span> <span class="ruby-identifier">new_heap</span>
+  <span class="ruby-ivar">@heap</span> = <span class="ruby-identifier">new_heap</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- inject_heap-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- inject_heap-method -->
+
+    
+      <div id="method-i-not_empty-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">not_empty?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="not_empty-3F-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">not_empty?</span>
+  <span class="ruby-operator">!</span><span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- not_empty-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- not_empty-3F-method -->
+
+    
+      <div id="method-i-parent_index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">parent_index</span><span
+            class="method-args">(index)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>def parent i   #Jääkööt tähän, vaikkakin turha</p>
+
+<pre>@heap[parent_index i]</pre>
+
+<p>end</p>
+          
+
+          
+          <div class="method-source-code" id="parent_index-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parent_index</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-value">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-comment">##poikkeustapaus - tähän ei pitäisi päätyä</span>
+  ((<span class="ruby-identifier">index</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-ivar">@d</span>).<span class="ruby-identifier">floor</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- parent_index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- parent_index-method -->
+
+    
+      <div id="method-i-peak" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">peak</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="peak-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">peak</span>
+  <span class="ruby-ivar">@heap</span>[<span class="ruby-value">0</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- peak-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- peak-method -->
+
+    
+      <div id="method-i-remove_max" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remove_max</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="remove_max-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_max</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">heap</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">deleted</span> = <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">delete_at</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">last_one</span> = <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">last_one</span>
+    <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">insert</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">last_one</span>
+    <span class="ruby-identifier">heapify_down</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">deleted</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- remove_max-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- remove_max-method -->
+
+    
+      <div id="method-i-swap" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">swap</span><span
+            class="method-args">(first_index, second_index)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="swap-source">
+            <pre><span class="ruby-comment"># File src/d_heap.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">swap</span>(<span class="ruby-identifier">first_index</span>, <span class="ruby-identifier">second_index</span>)
+  <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">first_index</span>], <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">second_index</span>] = <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">second_index</span>], <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">first_index</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- swap-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- swap-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>class BinaryHeap - RDoc Documentation</title>
+<title>class Stack - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -47,7 +47,7 @@
     <nav id="file-list-section" class="section">
   <h3 class="section-header">Defined In</h3>
   <ul>
-    <li>src/BinaryHeap.rb
+    <li>src/stack.rb
   </ul>
 </nav>
 
@@ -72,15 +72,15 @@
     
     <li><a href="#method-c-new">::new</a>
     
-    <li><a href="#method-i-dec_key">#dec_key</a>
+    <li><a href="#method-i-clear">#clear</a>
     
-    <li><a href="#method-i-get_heap">#get_heap</a>
+    <li><a href="#method-i-count">#count</a>
     
-    <li><a href="#method-i-heapify">#heapify</a>
+    <li><a href="#method-i-empty-3F">#empty?</a>
     
-    <li><a href="#method-i-inc_key">#inc_key</a>
+    <li><a href="#method-i-pop">#pop</a>
     
-    <li><a href="#method-i-remove_max">#remove_max</a>
+    <li><a href="#method-i-push">#push</a>
     
   </ul>
 </nav>
@@ -115,7 +115,7 @@
 </nav>
 
 <div id="documentation">
-  <h1 class="class">class BinaryHeap</h1>
+  <h1 class="class">class Stack</h1>
 
   <div id="description" class="description">
     
@@ -137,19 +137,15 @@
       <h3 class="section-header">Attributes</h3>
 
       
-      <div id="attribute-i-heap" class="method-detail">
+      <div id="attribute-i-stack" class="method-detail">
         <div class="method-heading attribute-method-heading">
-          <span class="method-name">heap</span><span
+          <span class="method-name">stack</span><span
             class="attribute-access-type">[RW]</span>
         </div>
 
         <div class="method-description">
         
-        <p>maksimi binomikeko</p>
-
-<p>STAUS: Keon luonti ja Heapify toimii - uuden alkion tuonti kekoon siis</p>
-
-<pre>Keosta poistaminen toimii</pre>
+        
         
         </div>
       </div>
@@ -179,9 +175,9 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File src/BinaryHeap.rb, line 11</span>
+            <pre><span class="ruby-comment"># File src/stack.rb, line 4</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
-  <span class="ruby-ivar">@heap</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@stack</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
           </div><!-- new-source -->
           
@@ -199,150 +195,10 @@
       <h3 class="section-header">Public Instance Methods</h3>
 
     
-      <div id="method-i-dec_key" class="method-detail ">
+      <div id="method-i-clear" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">dec_key</span><span
-            class="method-args">(new_value, index)</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-
-          
-          <div class="method-source-code" id="dec_key-source">
-            <pre><span class="ruby-comment"># File src/BinaryHeap.rb, line 39</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">dec_key</span> <span class="ruby-identifier">new_value</span>, <span class="ruby-identifier">index</span>
-  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">new_value</span>
-    <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>] = <span class="ruby-identifier">new_value</span>
-    <span class="ruby-identifier">heapify_down</span> <span class="ruby-identifier">index</span>
-  <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- dec_key-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- dec_key-method -->
-
-    
-      <div id="method-i-get_heap" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">get_heap</span><span
-            class="method-args">()</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>debuggausta/debuggausta varten - joo ei rubymäinen ratkaisu   ja ihan
-turha…</p>
-          
-
-          
-          <div class="method-source-code" id="get_heap-source">
-            <pre><span class="ruby-comment"># File src/BinaryHeap.rb, line 54</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_heap</span>
-  <span class="ruby-ivar">@heap</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- get_heap-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- get_heap-method -->
-
-    
-      <div id="method-i-heapify" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">heapify</span><span
-            class="method-args">(seed)</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          <pre>Lisää kekoon arvoja/alkioita
-Mikään ei perjaatteessa rajoita keossa olevien asioiden tyyppiä,
-kunhan niitä voi vertailla keskenään (&lt;, &gt;, ==)</pre>
-<ul><li>
-<p><strong>Args</strong>    :</p>
-<ul><li>
-<p>seed, Taulukko jossa</p>
-</li></ul>
-</li><li>
-<p><strong>Returns</strong> : -</p>
-</li></ul>
-          
-
-          
-          <div class="method-source-code" id="heapify-source">
-            <pre><span class="ruby-comment"># File src/BinaryHeap.rb, line 25</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">heapify</span> <span class="ruby-identifier">seed</span>
-  <span class="ruby-identifier">seed</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
-    <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">e</span>
-    <span class="ruby-identifier">heapify_up</span>(<span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)
-  <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- heapify-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- heapify-method -->
-
-    
-      <div id="method-i-inc_key" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">inc_key</span><span
-            class="method-args">(new_value, index)</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-
-          
-          <div class="method-source-code" id="inc_key-source">
-            <pre><span class="ruby-comment"># File src/BinaryHeap.rb, line 32</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">inc_key</span> <span class="ruby-identifier">new_value</span>, <span class="ruby-identifier">index</span>
-  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">new_value</span>
-    <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>] = <span class="ruby-identifier">new_value</span>
-    <span class="ruby-identifier">heapify_up</span> <span class="ruby-identifier">index</span>
-  <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- inc_key-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- inc_key-method -->
-
-    
-      <div id="method-i-remove_max" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">remove_max</span><span
+          <span class="method-name">clear</span><span
             class="method-args">()</span>
           <span class="method-click-advice">click to toggle source</span>
         </div>
@@ -354,22 +210,139 @@ kunhan niitä voi vertailla keskenään (&lt;, &gt;, ==)</pre>
           
 
           
-          <div class="method-source-code" id="remove_max-source">
-            <pre><span class="ruby-comment"># File src/BinaryHeap.rb, line 46</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_max</span>
-  <span class="ruby-identifier">deleted</span> = <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">delete_at</span> <span class="ruby-value">0</span>
-  <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">insert</span> <span class="ruby-value">0</span>, <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">pop</span>
-  <span class="ruby-identifier">heapify_down</span> <span class="ruby-value">0</span>
-  <span class="ruby-identifier">deleted</span>
+          <div class="method-source-code" id="clear-source">
+            <pre><span class="ruby-comment"># File src/stack.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clear</span>
+  <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">clear</span>
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- remove_max-source -->
+          </div><!-- clear-source -->
           
         </div>
 
         
 
         
-      </div><!-- remove_max-method -->
+      </div><!-- clear-method -->
+
+    
+      <div id="method-i-count" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">count</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="count-source">
+            <pre><span class="ruby-comment"># File src/stack.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">count</span>
+  <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">length</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- count-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- count-method -->
+
+    
+      <div id="method-i-empty-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">empty?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="empty-3F-source">
+            <pre><span class="ruby-comment"># File src/stack.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">empty?</span>
+  <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- empty-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- empty-3F-method -->
+
+    
+      <div id="method-i-pop" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">pop</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="pop-source">
+            <pre><span class="ruby-comment"># File src/stack.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pop</span>
+  <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">pop</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- pop-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- pop-method -->
+
+    
+      <div id="method-i-push" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">push</span><span
+            class="method-args">(item)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="push-source">
+            <pre><span class="ruby-comment"># File src/stack.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">push</span>(<span class="ruby-identifier">item</span>)
+  <span class="ruby-ivar">@stack</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">item</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- push-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- push-method -->
 
     
     </section><!-- public-instance-method-details -->
