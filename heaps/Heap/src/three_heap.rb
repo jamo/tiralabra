@@ -1,4 +1,4 @@
-require './d_heap.rb'
+require_relative './d_heap.rb'
 class ThreeHeap < DHeap 
   
   def initialize 
