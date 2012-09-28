@@ -1,5 +1,5 @@
 class Node
-  attr_accessor :key, :sibling, :parent, :child, :degree
+  attr_accessor :key, :degree, :sibling, :parent, :child
 
   def initialize key
     @key = key

@@ -31,8 +31,8 @@ class BinomialHeap
   #pseudon mukainen
   def minimum
     y = nil
-    x = root_node
-    min = Float::INFINITY
+    x = @root_node
+    min = Float::INFINITY #mahd iso arvo
     while x != nil
       if x.key < min
         min = x.key
@@ -40,6 +40,7 @@ class BinomialHeap
       end
       x = x.sibling
     end
+    y
   end
 
   #pseudon mukainen
@@ -52,18 +53,48 @@ class BinomialHeap
 
   #pseudomainen TODO
   def extract_min
-    #remove minimum key root x from heaps root list
-    h= BinomialHeap.new
-    #root list oh f = x.children in reverse order
-    union self, h
+    return nil unless @root_node.sibling
+    x = @root_node
+    y= x.sibling
+    pred = x
+    xpred = nil
+    
+    while y!=nil
+      if y.key < x.key
+        x=y
+        xpred = pred
+      end
+      pred = y
+      y = y.sibling
+    end
+    remove_from_root_list x, xpred
+    x
+  end
 
+
+
+ 
+  def remove_from_root_list x, pred
+    if x==@root_node
+      @root_node = @root_node.sibling
+    else
+      pred.sibling = x.sibling
+    end
+    hh = BinomialHeap.new
+    z = x.child
+    while z != nil
+      nextt = z.sibling
+      hh.root_node = z
+      z = nextt
+    end
+    @root_node = union(self, hh)
   end
 
   #pseudon mukainen
   def union h1, h2
     h = BinomialHeap.new
     h.root_node = merge h1, h2
-    returh h if h.root_node == nil
+    return h if h.root_node == nil
     prev_x = nil
     x = h.root_node
     next_x = x.sibling
@@ -118,7 +149,7 @@ class BinomialHeap
       return nh2 if nh1 == nil
       return nh1 if nh2 == nil
     end
-  #nyt tiedetään et noi olemassa - pienempi riski hajoomiseen
+    #nyt tiedetään et noi olemassa - pienempi riski hajoomiseen
 
     h = make_heap
     if h2.root_node.key < h1.root_node.key
