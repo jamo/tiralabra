@@ -68,5 +68,31 @@ describe BinaryHeap do
     end
 
   end
+  
+  describe "using BinaryHeap" do
+    it "should work for small sets" do
+      100.times do
+        @binary_heap.heapify Random.rand(100)
+      end
+      results = []
+      100.times do
+        results.push @binary_heap.remove_max
+      end
+      sorted_array = results.dup.sort
+      sorted_array.should.eql? results
+    end
+    
+    it "should work for bigger sets" do
+      10000.times do
+        @binary_heap.heapify Random.rand(10000)
+      end
+      results = []
+      10000.times do
+        results.push @binary_heap.remove_max
+      end
+      sorted_array = results.dup.sort
+      sorted_array.should.eql? results
+    end
+  end
 
 end

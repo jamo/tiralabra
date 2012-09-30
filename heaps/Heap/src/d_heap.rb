@@ -180,5 +180,9 @@ class DHeap
   def peak
     @heap[0]
   end
+  
+  def get_heap
+    @heap
+  end
 
 end
