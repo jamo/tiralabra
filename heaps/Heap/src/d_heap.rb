@@ -1,28 +1,24 @@
 require 'pp'
 require 'ruby-debug'
 class DHeap
+  #heap on taulukko, johon keon elementit kootaan
+  #d on keon yksittäisen elementin lasten määrä
   attr_accessor :heap, :d
 
   @dbg = false
 
-  ##
-  #Luodaan keon oleellisimat komponentit
+  #Alustetaan keon oleellisimat komponentit
   # @param [Fixnum]  lasten määrä
   def initialize d
     @heap, @d = Array.new, d
   end
 
-
-  #def parent i   #Jääkööt tähän, vaikkakin turha
-  #  @heap[parent_index i]
-  #end
-
-  ##
   # Palauttaa parentin indexin
   #
   # @param [Fixnum]  parentin indeksin laskentaan
   def parent_index index
-    return 0 if index == 0 ##poikkeustapaus - tähän ei pitäisi päätyä
+    ##poikkeustapaus - haetaan indeksissä 0 olevan parenttia
+    return 0 if index == 0 
     ((index-1).to_f/@d).floor
   end
 
@@ -150,7 +146,7 @@ class DHeap
     @heap[childs.values.max]
     @heap[index] < childs.values.max
   end
-  ##
+  
   # Palauttaa suurimman lapsen indeksin
   # @param [Fixnum] index, indeksi
   def get_index_of_biggest_child index
@@ -161,26 +157,34 @@ class DHeap
     childs.key childs.values.max
   end
 
+  #Palautaa tiedon onko keko tyhjä
   def empty?
     heap.empty?
   end
 
+  #Palauttaa tiedon onko keko ei tyhjä
   def not_empty?
     !empty?
   end
 
+  #Tyhjentää kaikki elementit keosta
   def clear!
     heap.clear
   end
 
+  #Asettaa keon taulukoksi parametrina annetun taulukon
+  #Tämä olettaa että taulukko noudattaa kyseisen keon kekoehtoa.
   def inject_heap new_heap
     @heap = new_heap
   end
 
+  #Näyttää mitä indeksissä 0 on
+  #palauttaa nil jos taulukko on tyhjä
   def peak
     @heap[0]
   end
   
+  #Palauttaa viitteen kekon taulukkoon
   def get_heap
     @heap
   end
