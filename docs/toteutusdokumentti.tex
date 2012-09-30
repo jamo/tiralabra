@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+
+\begin{document}
+\title{TiRa labra - Toteutusdokumentti} 
+\author{Jarmo Isotalo}
+\maketitle
+
+\section{Toteutettavat algoritmit}
+
+Toteutan työssäni 3 kekoa, binäärikeon, binomikeon ja d-ary keon
+
+\section{Toteutuneet aika- ja tilavaativuudet (O-analyysi)}
+\subsection{Aikavaatimus}
+Tarkastelen tässä vain muutaman eri tapauksen aikavaativuuksia:
+\begin{enumerate}
+\item Keon alustaminen - Create\\
+Jokaisessa keossa, binääri-,kolmi-, ja d-keossa operaatio on kutakuinkin saman kestoinen:
+\begin{enumerate}
+\item Aluksi alustetaan taulukko ja tallennetaan tietoon kunkin lapsien määrä.
+Binäärikeossa lapsia on kaksi, kolmikeossa kolme ja d-keossa d kappaletta. $O(1)$
+\item Koska Create tehdään tyhjälle keolle, on operaatio vakioaikainen. Tässä asetetaan taulun ensimmäiseen indeksiin parametrina saatu arvo. $O(1)$
+\end{enumerate}
+\item Kekoon lisääminen - Insert\\
+Jokaisessa keossa, binääri-,kolmi-, ja d-keossa operaatio on kutakuinkin saman kestoinen:
+\begin{enumerate}
+\item Aluksi parametrina saatu elementti lisätään keon viimeiseen indeksiin.$O(1)$
+\item Sitten indeksille suoritetaan \emph{heapify\_up}, joka siirtää elementtiä ylöspäin, kunnes keko noudattaa taas kekoehtoa. Tässä oletetaan, että keko noudatti kekoehtoa ennen elementin lisäämistä.
+Tätä tapahtuu keon korkeuden verran. Eli insertin aikavaativuus on toteutuksessani $O(\log n)$
+\end{enumerate}
+\item Keosta poistaminen - Delete\\
+Jokaisessa keossa, binääri-,kolmi-, ja d-keossa operaatio on kutakuinkin saman kestoinen:
+\begin{enumerate}
+\item Elementtiä keosta poistettaessa poistetaan elementti keon taulukon indeksistä 0. $O(1)$
+\item Sen jälkeen siirretään keossa viimeisenä oleva elementti kekotaulukon indeksiin nolla. $O(1)$
+\item Sitten kutsutaan \emph{heapify\_down} äsekettäin indeksiin nolla siirretylle, kunnes kekoehto toteutuu. $O(\log n)$
+\end{enumerate}
+\end{enumerate}
+Kekojen toteutuken vuoksi O notaation ajat ovat samankaltaisia, mutta todellisuudessa lasten määrän lisääminen nopeuttaa keon toimintaa. Kunnolliset BenchMarkit tulossa TODO\\\\
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+&Binary Heap & Three Heap & D-ary Heap \\\hline
+Create & $O (1)$ & $O (1)$ & $O (1)$\\\hline
+Insert & $O (\log n)$ & $O (\log n)$ & $O (\log n)$\\\hline
+Delete  & $O (\log n)$ & $O (\log n)$ & $O (\log n)$\\\hline
+
+\end{tabular}
+
+\subsection{Tilavaatimus}
+Tilavaativuuden arvoit eivät ole ihan hatusta heitettyjä, mutta ne riippuvat hyvin pitkälti toteutuksesta, joten rohkenen jättää ne melko avoimiksi. Ne toki tarkentuvat kun menille selviää kekojen  ja niiden metodien toteutustapa\\
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+&Binary Heap & Binomial heap & D-ary \\\hline
+Insert & $O (\log n)$ & $O (\log n)$ & ?\\\hline
+Delete  & $O (\log n)$ & $O (\log n)$ & ?\\\hline
+Build & $O (\log n)$ & $O (\log n)$ & $O (n)$\\\hline
+\end{tabular}
+
+
+\section{Lähteet}
+\url{https://en.wikipedia.org/wiki/Heap_(data_structure)}
+\\Binäärikeko ja D-keko\\
+\url{http://en.wikipedia.org/wiki/Binary_heap}
+\url{http://en.wikipedia.org/wiki/D-ary_heap}
+\url{http://www.cs.helsinki.fi/u/tapasane/keot.pdf}
+\url{http://www.cs.unc.edu/~plaisted/comp750/05-binheaps.ppt}
+\\Binomikeko:\\
+\url{http://cs.anu.edu.au/people/Warren.Armstrong/apac/trunk/module2/binomial_heaps.pdf}
+\url{https://www.cse.yorku.ca/~aaw/Sotirios/BinomialHeapAlgorithm.html}
+\url{http://en.wikipedia.org/wiki/Binomial_heap}
+\url{}
+
+\end{document}

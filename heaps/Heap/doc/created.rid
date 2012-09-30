@@ -1,8 +1,10 @@
-Thu, 13 Sep 2012 19:31:11 +0300
-src/BinaryHeap.rb	Mon, 10 Sep 2012 09:48:56 +0300
-src/binomial_heap.rb	Sun, 09 Sep 2012 21:13:16 +0300
-src/d_heap.rb	Thu, 13 Sep 2012 19:31:02 +0300
-src/node.rb	Sun, 09 Sep 2012 21:11:59 +0300
+Sun, 30 Sep 2012 19:49:54 +0300
+src/binary_heap.rb	Sun, 30 Sep 2012 19:37:16 +0300
+src/d_heap.rb	Sun, 30 Sep 2012 19:35:11 +0300
+src/node.rb	Thu, 27 Sep 2012 12:42:49 +0300
+src/old/BinaryHeap.rb	Mon, 10 Sep 2012 09:48:56 +0300
+src/old/binomial_heap.rb	Fri, 28 Sep 2012 14:45:20 +0300
 src/old/my_node.rb	Sun, 09 Sep 2012 16:29:50 +0300
 src/old/old_binomial_heap.rb	Sun, 09 Sep 2012 19:52:53 +0300
 src/stack.rb	Sun, 09 Sep 2012 02:04:26 +0300
+src/three_heap.rb	Sun, 30 Sep 2012 19:36:31 +0300

@@ -27,10 +27,9 @@ Lisäksi testien kattavuuden kuvaa heap/Heap/spec/coverage/index.html tiedosto
 
 
 
-Status to 6.9 21:00
+Status to 30.9 20.00
 -------------------
 -Suunnitteludokumentti valmis
--Binäärikeko valmis
--Binäärikeko 100% testikattavuus + testit kunnossa
-
-
+-Keot valmiit
+-100% testattu
+-Dokumentointi pitkällä

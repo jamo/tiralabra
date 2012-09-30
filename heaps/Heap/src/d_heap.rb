@@ -1,11 +1,11 @@
+#D-keko, keko jolla on d lasta.
+
 require 'pp'
 require 'ruby-debug'
 class DHeap
   #heap on taulukko, johon keon elementit kootaan
   #d on keon yksittäisen elementin lasten määrä
   attr_accessor :heap, :d
-
-  @dbg = false
 
   #Alustetaan keon oleellisimat komponentit
   # @param [Fixnum]  lasten määrä
@@ -35,20 +35,18 @@ class DHeap
   # @param [Fixnum] indeksi, jonka lapsen indeksi lasketaan
   def child_index_left index
     [@d * index + 1, @heap.length-1].min
-    #@d * ( index - 1 ) + 2
   end
 
   ##
   # Palauttaa vasemman lapsen indeksin
   # @param [Fixnum]  indeksi, jonka oikea indeksi lasketaan
   def child_index_right index
-    #@d*index +@d
     [@d*index+@d, @heap.length-1].min
   end
 
   ##
-  #  Metodi, joka lisää alkioita heap taulukkoon.
-  #  Voidaan kutsua myös sorituksen aikana.
+  # Metodi, joka lisää alkioita heap taulukkoon.
+  # Voidaan kutsua myös sorituksen aikana.
   # @param [Array]  n klp argumenttejä. jotka lisätään taulukkoon.
   def heapify *seed #saadaan
     seed.each do |e|
@@ -56,6 +54,10 @@ class DHeap
       heapify_up(@heap.length-1)
     end
   end
+  
+  # Luodaan metodi insert, alias joka ohjaa kutsin heapify-metdille. 
+  # joka lopulta tekee oleelliset operaatiot
+  alias :insert :heapify
 
   ##
   # Poistaa ja palauttaa suurimman arvon omaavan elementin keosta
@@ -64,7 +66,7 @@ class DHeap
     return nil if heap.empty?
     deleted = @heap.delete_at 0
     last_one = @heap.pop
-    if last_one
+    if last_one #ei ole false tai nil
       @heap.insert 0, last_one
       heapify_down 0
     end

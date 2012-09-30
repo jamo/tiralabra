@@ -115,5 +115,41 @@ describe DHeap do
       @heap.peak.should.eql? @heap.heap[0]
     end
   end
+  
+  describe "using DHeap" do
+    it "should work for small sets with different d values" do
+      50.times do
+        @heap = DHeap.new Random.rand(1..50)
+        100.times do
+          @heap.heapify Random.rand(100)
+        end
+        results = []
+        100.times do
+          results.push @heap.remove_max
+        end
+        sorted_array = results.dup.sort
+        sorted_array.should.eql? results
+      end
+    
+    end
+    
+    it "should work for bigger sets with different d values" do
+      10000.times do
+        @heap = DHeap.new Random.rand(1..50)
+        5000.times do
+          @heap.heapify Random.rand(10000)
+        end
+        results = []
+        5000.times do
+          results.push @heap.remove_max
+        end
+        sorted_array = results.dup.sort
+        sorted_array.should.eql? results
+      end
+    
+    end
+  end
+
+    
 
 end
