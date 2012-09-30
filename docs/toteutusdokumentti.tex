@@ -9,7 +9,7 @@
 
 \section{Toteutettavat algoritmit}
 
-Toteutan työssäni 3 kekoa, binäärikeon, binomikeon ja d-ary keon
+Toteutan työssäni 3 kekoa, binäärikeon, kolmikeon ja d-keon.
 
 \section{Toteutuneet aika- ja tilavaativuudet (O-analyysi)}
 \subsection{Aikavaatimus}
@@ -80,6 +80,52 @@ Insert & $O (\log n)$ & $O (\log n)$ & $O (\log n)$\\\hline
 Delete  & $O (\log n)$ & $O (\log n)$ & $O (\log n)$\\\hline
 
 \end{tabular}
+
+\section{Tiedostojen siainnit}
+Tiedostojen polut on annettu suhteellisesti git repositorion juuresta katsottuna.
+\begin{itemize}
+\item Dokumentaatio
+\begin{itemize}
+\item \emph{docs/} 
+\begin{itemize}
+\item Suunnitteludokumentti
+\item Toteutusdokumentti
+\item Käyttöohje
+\item Testausdokumentti
+\end{itemize}
+\end{itemize}
+
+\item Lähdekoodi
+\begin{itemize}
+\item \emph{heaps/Heap/src/} 
+\begin{itemize}
+\item Binäärikeko - binary\_heap.rb
+\item 3-keko - three\_heap.rb
+\item D-keko - d\_heap.rb
+\item Pino - stack.rb
+\end{itemize}
+\end{itemize}
+
+\item Testit
+\begin{itemize}
+\item \emph{heaps/Heap/spec/} 
+\begin{itemize}
+\item Binäärikeon testit - binary\_heap\_spec.rb
+\item 3-keon testit - three\_heap\_spec.rb
+\item D-keon testit - d\_heap\_spec.rb
+\item Pinon testit - stack\_spec.rb
+\end{itemize}
+\end{itemize}
+
+\item Testien kattavuus
+\begin{itemize}
+\item \emph{heaps/Heap/src/doc} 
+\begin{itemize}
+\item index.html - Kaunis html pohjainen esitys koodin kattavuudesta
+\end{itemize}
+\end{itemize}
+
+\end{itemize}
 
 
 \section{Lähteet}

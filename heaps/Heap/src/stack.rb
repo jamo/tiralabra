@@ -29,6 +29,9 @@ class Stack
     @stack.clear
   end
   
+  # Alias metodille clear
+  alias :clear! :clear
+  
   #Kertoo onko pino tyhjä
   def empty?
     @stack.empty?
