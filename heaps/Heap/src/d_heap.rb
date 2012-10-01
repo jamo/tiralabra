@@ -1,7 +1,6 @@
 #D-keko, keko jolla on d lasta.
 
 require 'pp'
-require 'ruby-debug'
 class DHeap
   #heap on taulukko, johon keon elementit kootaan
   #d on keon yksittäisen elementin lasten määrä
