@@ -100,11 +100,15 @@
     
     <li><a href="#method-i-inject_heap">#inject_heap</a>
     
+    <li><a href="#method-i-insert">#insert</a>
+    
     <li><a href="#method-i-not_empty-3F">#not_empty?</a>
     
     <li><a href="#method-i-parent_index">#parent_index</a>
     
     <li><a href="#method-i-peak">#peak</a>
+    
+    <li><a href="#method-i-pop">#pop</a>
     
     <li><a href="#method-i-remove_max">#remove_max</a>
     
@@ -343,7 +347,7 @@ indeksi lasketaan</p>
 
           
           <div class="method-source-code" id="clear-21-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 169</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 174</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">clear!</span>
   <span class="ruby-identifier">heap</span>.<span class="ruby-identifier">clear</span>
 <span class="ruby-keyword">end</span></pre>
@@ -376,7 +380,7 @@ avainta muutetaan</p>
 
           
           <div class="method-source-code" id="dec_key-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 90</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 95</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">dec_key</span> <span class="ruby-identifier">new_value</span>, <span class="ruby-identifier">index</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>]
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">new_value</span>
@@ -410,7 +414,7 @@ avainta muutetaan</p>
 
           
           <div class="method-source-code" id="empty-3F-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 159</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 164</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">empty?</span>
   <span class="ruby-identifier">heap</span>.<span class="ruby-identifier">empty?</span>
 <span class="ruby-keyword">end</span></pre>
@@ -440,7 +444,7 @@ avainta muutetaan</p>
 
           
           <div class="method-source-code" id="get_heap-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 186</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 191</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_heap</span>
   <span class="ruby-ivar">@heap</span>
 <span class="ruby-keyword">end</span></pre>
@@ -470,7 +474,7 @@ avainta muutetaan</p>
 
           
           <div class="method-source-code" id="get_index_of_biggest_child-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 150</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 155</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_index_of_biggest_child</span> <span class="ruby-identifier">index</span>
   <span class="ruby-identifier">childs</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
   <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">child_index_left</span>(<span class="ruby-identifier">index</span>)<span class="ruby-operator">..</span><span class="ruby-identifier">child_index_right</span>(<span class="ruby-identifier">index</span>)
@@ -505,7 +509,7 @@ kekoehdon ylläpidossa @param [Fixnum] index, indeksi</p>
 
           
           <div class="method-source-code" id="has_bigger_childen-3F-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 138</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 143</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">has_bigger_childen?</span> <span class="ruby-identifier">index</span>
   <span class="ruby-identifier">childs</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
   <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">child_index</span> <span class="ruby-identifier">index</span>
@@ -554,6 +558,10 @@ aikana. @param [Array]  n klp argumenttejä. jotka lisätään taulukkoon.</p>
         </div>
 
         
+        <div class="aliases">
+          Also aliased as: <a href="DHeap.html#method-i-insert">insert</a>
+        </div>
+        
 
         
       </div><!-- heapify-method -->
@@ -579,7 +587,7 @@ arvo on suurempi kuin niiden parentin arvo</p>
 
           
           <div class="method-source-code" id="heapify_down-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 124</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 129</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">heapify_down</span> <span class="ruby-identifier">index</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">has_bigger_childen?</span> <span class="ruby-identifier">index</span>
     <span class="ruby-comment">#puts &quot;sisalla hepify_downissa #{index}&quot;</span>
@@ -617,7 +625,7 @@ indeksi josta alaspäin kekoehto korjataan</p>
 
           
           <div class="method-source-code" id="heapify_up-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 108</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 113</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">heapify_up</span> <span class="ruby-identifier">index</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-comment">#on parent olemassa TODO</span>
     <span class="ruby-identifier">parent_i</span> = <span class="ruby-identifier">parent_index</span> <span class="ruby-identifier">index</span>
@@ -656,7 +664,7 @@ avainta muutetaan</p>
 
           
           <div class="method-source-code" id="inc_key-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 77</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 82</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">inc_key</span> <span class="ruby-identifier">new_value</span>, <span class="ruby-identifier">index</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>]
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">index</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">new_value</span>
@@ -691,7 +699,7 @@ taulukko noudattaa kyseisen keon kekoehtoa.</p>
 
           
           <div class="method-source-code" id="inject_heap-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 175</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 180</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">inject_heap</span> <span class="ruby-identifier">new_heap</span>
   <span class="ruby-ivar">@heap</span> = <span class="ruby-identifier">new_heap</span>
 <span class="ruby-keyword">end</span></pre>
@@ -703,6 +711,34 @@ taulukko noudattaa kyseisen keon kekoehtoa.</p>
 
         
       </div><!-- inject_heap-method -->
+
+    
+      <div id="method-i-insert" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">insert</span><span
+            class="method-args">(*seed)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Luodaan metodi insert, alias joka ohjaa kutsin heapify-metdille.  joka
+lopulta tekee oleelliset operaatiot</p>
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="DHeap.html#method-i-heapify">heapify</a>
+        </div>
+        
+      </div><!-- insert-method -->
 
     
       <div id="method-i-not_empty-3F" class="method-detail ">
@@ -721,7 +757,7 @@ taulukko noudattaa kyseisen keon kekoehtoa.</p>
 
           
           <div class="method-source-code" id="not_empty-3F-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 164</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 169</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">not_empty?</span>
   <span class="ruby-operator">!</span><span class="ruby-identifier">empty?</span>
 <span class="ruby-keyword">end</span></pre>
@@ -785,7 +821,7 @@ taulukko noudattaa kyseisen keon kekoehtoa.</p>
 
           
           <div class="method-source-code" id="peak-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 181</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 186</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">peak</span>
   <span class="ruby-ivar">@heap</span>[<span class="ruby-value">0</span>]
 <span class="ruby-keyword">end</span></pre>
@@ -797,6 +833,33 @@ taulukko noudattaa kyseisen keon kekoehtoa.</p>
 
         
       </div><!-- peak-method -->
+
+    
+      <div id="method-i-pop" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">pop</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="DHeap.html#method-i-remove_max">remove_max</a>
+        </div>
+        
+      </div><!-- pop-method -->
 
     
       <div id="method-i-remove_max" class="method-detail ">
@@ -816,12 +879,12 @@ kekoehdon toiminnasta</p>
 
           
           <div class="method-source-code" id="remove_max-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 61</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_max</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">heap</span>.<span class="ruby-identifier">empty?</span>
   <span class="ruby-identifier">deleted</span> = <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">delete_at</span> <span class="ruby-value">0</span>
   <span class="ruby-identifier">last_one</span> = <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">pop</span>
-  <span class="ruby-keyword">if</span> <span class="ruby-identifier">last_one</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">last_one</span> <span class="ruby-comment">#ei ole false tai nil</span>
     <span class="ruby-ivar">@heap</span>.<span class="ruby-identifier">insert</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">last_one</span>
     <span class="ruby-identifier">heapify_down</span> <span class="ruby-value">0</span>
   <span class="ruby-keyword">end</span>
@@ -831,6 +894,10 @@ kekoehdon toiminnasta</p>
           
         </div>
 
+        
+        <div class="aliases">
+          Also aliased as: <a href="DHeap.html#method-i-pop">pop</a>
+        </div>
         
 
         
@@ -855,7 +922,7 @@ päittäin</p>
 
           
           <div class="method-source-code" id="swap-source">
-            <pre><span class="ruby-comment"># File d_heap.rb, line 102</span>
+            <pre><span class="ruby-comment"># File d_heap.rb, line 107</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">swap</span>(<span class="ruby-identifier">first_index</span>, <span class="ruby-identifier">second_index</span>)
   <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">first_index</span>], <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">second_index</span>] = <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">second_index</span>], <span class="ruby-ivar">@heap</span>[<span class="ruby-identifier">first_index</span>]
 <span class="ruby-keyword">end</span></pre>

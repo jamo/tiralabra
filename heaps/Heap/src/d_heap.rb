@@ -73,6 +73,7 @@ class DHeap
     deleted
   end
 
+  alias :pop :remove_max
   ##
   # Kasvattaa avaimen arvoa tietyssä indeksissä
   # Mikäli uusi arvo on pienempi kuin uusi arvo ei tehdä mitään
