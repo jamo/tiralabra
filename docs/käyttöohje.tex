@@ -1,6 +1,8 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{url}
+\setlength{\parindent}{0.0cm}
+
 
 \begin{document}
 \title{TiRa labra - Käyttöohje} 
@@ -8,15 +10,49 @@
 \maketitle
 
 \section{Käyttöohje}
+\subsection{Dokumentaation generointi}
+rdoc dokumentaation saa generoituta komennolla \emph{rdoc --main d\_heap.rb} kansiossa  \emph{heaps/Heap/src/}.
+
+\subsection{Mitä keot syövät}
+Kekoille voi syöttää mitä tahansa mitä voi vertailla keskenään. Testeissä kekoihin lisätään ainoastaan numeroita, mutta mikään koodissa ei estä esim. kirjainten lisäämistä kekoon.
+
 
 \subsection{Kekojen käyttäminen}
-Jokainen keko tarjotaa saman käytettävääden, ainut ero on keon lasten määrä sekä se että d-keko vaatii lasten määrän konstruktorissaan.
+Jokainen keko tarjotaa saman käytettävyyden, ainut ero on keon lasten määrä sekä se, että d-keko vaatii lasten määrän konstruktorissaan eli DHeap.new kutsussa.\\
 
+
+Hepify ja insert metodit ottavat parametrikseen n kappaletta kekoon syötettäviä tuotteita.\\
 
 Metodien tarkempi toimivuus on kuvattu rdoc-dokumentaatiossa \emph{heaps/Heap/src/doc/}.
 
-.\\TODO
+\subsection{Keon toiminnan testaaminen}
+Keot on toteutettu käytettäväksi osana jotain sovellusta, joten niiden käyttämiseen ei ole sen kummempaa käyttöliittymää rakennettu.\\
 
+Voit testata keon käyttöä suorittamalla \emph{heaps/Heap/src/test.rb} Tällä pääset interaktiiviseen ruby shelliin jossa voit käyttää kaikkia rubyn ominaisuuksia ja näitä kolmea kekoa jotka toteutin. \\
 
+Alla esimerkkisessio:
+\begin{verbatim}
+jamo ~/g/tiralabra/heaps/Heap/src $ruby test.rb 
+1.9.3-p125 :001 > d = DHeap.new 5
+ => #<DHeap:0x007fbebd8095e8 @heap=[], @d=5> 
+1.9.3-p125 :002 > d.insert 5,6,7,4,2,2,334,5,-123
+ => [5, 6, 7, 4, 2, 2, 334, 5, -123] 
+1.9.3-p125 :003 > d.remove_max
+ => 334 
+1.9.3-p125 :004 > d.remove_max
+ => 7 
+1.9.3-p125 :005 > d
+ => #<DHeap:0x007fbebd8095e8 @heap=[6, 5, 5, 4, 2, 2, -123], @d=5> 
+1.9.3-p125 :008 > d.inc_key 100, 0
+ => nil 
+1.9.3-p125 :009 > d
+ => #<DHeap:0x007fbebd8095e8 @heap=[100, 5, 5, 4, 2, 2, -123], @d=5> 
+1.9.3-p125 :010 > exit
+jamo ~/g/tiralabra/heaps/Heap/src $
+\end{verbatim}
+Testauksen saa lopetettua komennolla \emph{exit}
+
+\subsection{Tiedostojen sijainnit}
+Kerrottu toteutusdokumentissa
 
 \end{document}

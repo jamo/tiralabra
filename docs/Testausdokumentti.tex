@@ -1,0 +1,50 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\setlength{\parindent}{0.0cm}
+
+
+\begin{document}
+\title{TiRa labra - Testausdokumentti} 
+\author{Jarmo Isotalo}
+\maketitle
+
+\section{Testausdokumentti}
+
+\subsection{Mitä on testattu?}
+Testit testaavat irrallisesti oleellisimmat (d-)keon metodit. Lisäksi testaavat kekojen järjestykseen liittyviä ominaisuuksia. Eli testit lisäävät kekoon N kpl Satunnaisia arvoja väliltä 0-1000 ja poistavat ne sen jälkeen. Testit tarkistavat että arvot tulevat suuruusjärjestyksessä.\\
+
+Testit on toteutettu rspec-ohjelmalla ajettaviksi.
+
+\subsection{Testien ajaminen}
+Testit voidaan suorittaa kansiossa  \emph{heap/Heap/} suorittamalla komennon \emph{rspec spec/}. Tämä ajaa kaikki testit ja raportoi mahdollisista virheistä komentorivi käyttöliittymäänsä.
+Testien ajaminen päivittää joka kerralla koodin testien kattavuuden laskennan. 
+
+Testien kattavuuden näkee tiedostosta: 
+\emph{heaps/Heap/src/doc/index.html} 
+
+
+\subsection{Benchmark}
+Kekojen toimintaa voi benchmarkata suorittamalla \emph{heaps/Heap/benchmark/} kansiossa olevan \emph{my\_benchmark\_spec.rb}  tiedoston.
+
+Esimerkiksi kansiossa \emph{heaps/Heap/} ollessa komentorivillä \emph{rspec benchmark/}
+
+Tämä tulostaa seuraavanlaisen kaavion:
+
+\begin{verbatim}
+                            user     system      total        real
+Binaarikeko 100:lla     0.010000   0.000000   0.010000 (  0.004801)
+Kolmikeko 100:lla       0.010000   0.000000   0.010000 (  0.003847)
+D-keko 10 100:lla       0.000000   0.000000   0.000000 (  0.003700)
+Binaarikeko 30000:lla   5.010000   0.010000   5.020000 (  5.026139)
+Kolmikeko 30000:lla     3.820000   0.010000   3.830000 (  3.834460)
+D-keko 10 30000:lla     3.450000   0.030000   3.480000 (  3.484981)
+\end{verbatim} 
+Tässä testissä D-keossa D oli 10.
+
+Testit on ajettu i7 mac book prolla.
+
+\subsection{Dokumentaation generointi}
+rdoc dokumentaation saa generoituta komennolla \emph{rdoc --main d\_heap.rb} kansiossa  \emph{heaps/Heap/src/}.
+
+\end{document}
