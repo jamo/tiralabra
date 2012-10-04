@@ -1,3 +1,6 @@
+# Tässä on toteutettu 3 kekoa, binäärikeko, kolmikeko ja d-keko
+# D-keko on binääri ja kolmikeon yleistys, ja D-keolla on D lasta.
+
 #D-keko, keko jolla on d lasta.
 
 require 'pp'
