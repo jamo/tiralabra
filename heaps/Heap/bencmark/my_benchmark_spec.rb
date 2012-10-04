@@ -17,7 +17,6 @@ describe 'Benchmark' do
   
 
   describe 'binaryheap benchmark' do
-=begin
     it 'shows performance' do
       n=100
       Benchmark.bmbm do |b|
@@ -51,23 +50,5 @@ describe 'Benchmark' do
         end
       end
     end
-  end
-=end  
-  
-  it 'tekee jotain kivaa' do
-    Benchmark.bmbm do |b|
-       (2..100).step(2) do |i|
-        @d1 = DHeap.new i
-        n2 = 10000
-      
-        b.report("D-keko #{@d1.d} #{n2}:lla") do
-          n2.times {@d1.insert Random.rand(1000)}
-          n2.times {@d1.pop}
-        end
-      end
-    end
-  end
-  
+  end  
 end
-end
-
