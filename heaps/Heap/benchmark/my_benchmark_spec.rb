@@ -20,6 +20,18 @@ describe 'Benchmark' do
     it 'shows performance' do
       n=100
       Benchmark.bmbm do |b|
+        1..100.step(1) do |x|
+          b.report("D-keko #{d.d} ") do
+            d=DHeap.new x
+            1000.times do
+              d.insert Random.rand(10000)        
+            end
+            1000.times do
+              d.pop        
+            end
+          end
+        
+        
         b.report("Binaarikeko #{n}:lla") do
           n.times {@b.insert Random.rand(1000)}
           n.times {@b.pop}
@@ -49,6 +61,10 @@ describe 'Benchmark' do
           n1.times {@d.pop}
         end
       end
-    end
-  end  
+    end    
+    
+    
+    end  
+  end
 end
+
