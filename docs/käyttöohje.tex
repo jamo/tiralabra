@@ -11,10 +11,10 @@
 
 \section{Käyttöohje}
 \subsection{Dokumentaation generointi}
-rdoc dokumentaation saa generoituta komennolla \emph{rdoc --main d\_heap.rb} kansiossa  \emph{heaps/Heap/src/}.
+Rdoc dokumentaation saa generoituta komennolla \emph{rdoc --main d\_heap.rb} kansiossa  \emph{heaps/Heap/src/}.
 
 \subsection{Mitä keot syövät}
-Kekoille voi syöttää mitä tahansa mitä voi vertailla keskenään. Testeissä kekoihin lisätään ainoastaan numeroita, mutta mikään koodissa ei estä esim. kirjainten lisäämistä kekoon.
+Kekoille voi syöttää mitä tahansa, mitä voi vertailla keskenään. Testeissä kekoihin lisätään ainoastaan numeroita, mutta mikään koodissa ei estä esim. kirjainten lisäämistä kekoon.
 
 
 \subsection{Kekojen käyttäminen}
@@ -23,12 +23,12 @@ Jokainen keko tarjotaa saman käytettävyyden, ainut ero on keon lasten määrä
 
 Hepify ja insert metodit ottavat parametrikseen n kappaletta kekoon syötettäviä tuotteita.\\
 
-Metodien tarkempi toimivuus on kuvattu rdoc-dokumentaatiossa \emph{heaps/Heap/src/doc/}.
+Metodien tarkempi toimivuus on kuvattu rdoc-dokumentaatiossa \emph{heaps/Heap/src/doc/index.html}.
 
 \subsection{Keon toiminnan testaaminen}
 Keot on toteutettu käytettäväksi osana jotain sovellusta, joten niiden käyttämiseen ei ole sen kummempaa käyttöliittymää rakennettu.\\
 
-Voit testata keon käyttöä suorittamalla \emph{heaps/Heap/src/test.rb} Tällä pääset interaktiiviseen ruby shelliin jossa voit käyttää kaikkia rubyn ominaisuuksia ja näitä kolmea kekoa jotka toteutin. \\
+Voit testata keon käyttöä suorittamalla \emph{heaps/Heap/src/test.rb} Tällä pääset interaktiiviseen ruby shelliin jossa voit käyttää kaikkia rubyn ominaisuuksia ja näitä kolmea kekoa jotka toteutin. Riippuen laitteiston konfiguraatiosta voit joutua komentamaan  \emph{ruby heaps/Heap/src/test.rb}  \\
 
 Alla esimerkkisessio:
 \begin{verbatim}
@@ -53,6 +53,11 @@ jamo ~/g/tiralabra/heaps/Heap/src $
 Testauksen saa lopetettua komennolla \emph{exit}
 
 \subsection{Tiedostojen sijainnit}
-Kerrottu toteutusdokumentissa
+Kerrottu toteutusdokumentissa.
+
+\subsection{Sovellus ei toimi kunnolla/koneessani on väärä ruby versio}
+Oikean rubyversion asentaminen omalle koneelleen on helppoa, eikä se vaadi edes sen kummempia käyttöoikeuksia. \url{https://rvm.io/rvm/install/} \\
+En kuitenkaan käsittele tässä sen tarkemmin sen asentamista.
+
 
 \end{document}
