@@ -33,9 +33,9 @@ Tämä tulostaa keon suoritusaikoja erikokoisilla syötteillä.
 
 Status
 -------
- -Dokumentit valmiina
- -Keot valmiit
- -100% testattu
- -Dokumentointi valmis
+ *Dokumentit valmiina
+ *Keot valmiit
+ *100% testattu
+ *Dokumentointi valmis
 
 Eli työ taitaa olla kaikenkaikkiaan täysin valmis.
