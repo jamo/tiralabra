@@ -143,23 +143,25 @@ class DHeap
   # Hyödynnetään kekoehdon ylläpidossa
   # @param [Fixnum] index, indeksi
   def has_bigger_childen? index
-    childs = Hash.new
+    childs = []#Hash.new
     for i in child_index index
-      childs[i] = @heap[i]
+      childs << @heap[i]
     end
-    nil if childs == [] or childs.values == nil or (child_index(index)).max == @heap.length
-    @heap[childs.values.max]
-    @heap[index] < childs.values.max
+    nil if childs == [] or childs == nil or (child_index(index)).max == @heap.length
+    #@heap[childs.values.max]
+    @heap[index] < childs.max
   end
   
   # Palauttaa suurimman lapsen indeksin
   # @param [Fixnum] index, indeksi
   def get_index_of_biggest_child index
-    childs = Hash.new
-    for i in child_index_left(index)..child_index_right(index)
-      childs[i] = @heap[i]
+    childs = []
+    left_index = child_index_left(index)
+    right_index = child_index_right(index)
+    for i in left_index..right_index
+      childs << @heap[i]
     end
-    childs.key childs.values.max
+    childs.index(childs.max)+left_index
   end
 
   #Palautaa tiedon onko keko tyhjä

@@ -134,13 +134,13 @@ describe DHeap do
     end
     
     it "should work for bigger sets with different d values" do
-      10000.times do
+      10.times do
         @heap = DHeap.new Random.rand(1..50)
-        5000.times do
+        1000.times do
           @heap.heapify Random.rand(10000)
         end
         results = []
-        5000.times do
+        1000.times do
           results.push @heap.remove_max
         end
         sorted_array = results.dup.sort
