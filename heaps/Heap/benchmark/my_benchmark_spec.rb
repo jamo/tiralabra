@@ -3,7 +3,6 @@ require 'rspec'
 require_relative '../src/binary_heap.rb'
 require_relative '../src/d_heap.rb'
 require_relative '../src/three_heap.rb'
-require_relative '../src/stack.rb'
 
 
 
@@ -53,7 +52,6 @@ describe 'Benchmark' do
         for i in 1..50
           @d = DHeap.new i
           b.report("DHeap #{@d.d} #{n3}:lla") do
-            
             n3.times {@d.insert Random.rand(10000)}
             n3.times {@d.pop}
           end

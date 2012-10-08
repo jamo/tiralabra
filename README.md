@@ -1,14 +1,11 @@
-#tiralabra
+#Tiralabra
 Jarmon tiralabra
 
-Tässä toteutetaan
------------------
+###Aihe
+Toteutan seuraavat tietorakenteet
 * [Binäärikeko](http://en.wikipedia.org/wiki/Binary_heap)
 * [Binomikeko](http://en.wikipedia.org/wiki/Binomial_heap)
 * [D-keko](http://en.wikipedia.org/wiki/D-ary_heap)
-
-
-
 
 ##Testien suoritus
 

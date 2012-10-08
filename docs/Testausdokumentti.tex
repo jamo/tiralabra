@@ -94,9 +94,75 @@ DHeap 49 5000:lla       0.860000   0.010000   0.870000 (  0.877464)
 DHeap 50 5000:lla       0.810000   0.020000   0.830000 (  0.824955)
 \end{verbatim} 
 \normalsize
-Alun testissä  D-keon D oli 10. Alla on testattu D-keon D koon vaikutus operaatioiden nopeuteen. Alimmissa benchmarkeissa on lisätty 5000 satunnasta kokonaislukua D-kekoon
+Alun testissä  D-keon D oli 10. Alla on testattu D-keon D koon vaikutus operaatioiden nopeuteen. Alimmissa benchmarkeissa on lisätty 5000 satunnasta kokonaislukua D-kekoon.
 
 Testit on ajettu i7 mac book prolla.
+\newpage
+Vastaavat testit suoritettuna jrubyllä.
+
+\scriptsize
+\begin{verbatim}
+
+                            user     system      total        real
+Binaarikeko 100:lla     0.004000   0.000000   0.004000 (  0.004000)
+Kolmikeko 100:lla       0.002000   0.000000   0.002000 (  0.002000)
+D-keko 10 100:lla       0.002000   0.000000   0.002000 (  0.002000)
+Binaarikeko 30000:lla   1.490000   0.000000   1.490000 (  1.490000)
+Kolmikeko 30000:lla     1.100000   0.000000   1.100000 (  1.100000)
+D-keko 10 30000:lla     1.262000   0.000000   1.262000 (  1.262000)
+DHeap 1 5000:lla        0.157000   0.000000   0.157000 (  0.157000)
+DHeap 2 5000:lla        0.155000   0.000000   0.155000 (  0.155000)
+DHeap 3 5000:lla        0.156000   0.000000   0.156000 (  0.156000)
+DHeap 4 5000:lla        0.176000   0.000000   0.176000 (  0.176000)
+DHeap 5 5000:lla        0.173000   0.000000   0.173000 (  0.173000)
+DHeap 6 5000:lla        0.153000   0.000000   0.153000 (  0.153000)
+DHeap 7 5000:lla        0.186000   0.000000   0.186000 (  0.186000)
+DHeap 8 5000:lla        0.166000   0.000000   0.166000 (  0.166000)
+DHeap 9 5000:lla        0.156000   0.000000   0.156000 (  0.156000)
+DHeap 10 5000:lla       0.155000   0.000000   0.155000 (  0.155000)
+DHeap 11 5000:lla       0.153000   0.000000   0.153000 (  0.153000)
+DHeap 12 5000:lla       0.154000   0.000000   0.154000 (  0.154000)
+DHeap 13 5000:lla       0.161000   0.000000   0.161000 (  0.161000)
+DHeap 14 5000:lla       0.159000   0.000000   0.159000 (  0.158000)
+DHeap 15 5000:lla       0.184000   0.000000   0.184000 (  0.184000)
+DHeap 16 5000:lla       0.172000   0.000000   0.172000 (  0.172000)
+DHeap 17 5000:lla       0.153000   0.000000   0.153000 (  0.153000)
+DHeap 18 5000:lla       0.160000   0.000000   0.160000 (  0.160000)
+DHeap 19 5000:lla       0.156000   0.000000   0.156000 (  0.156000)
+DHeap 20 5000:lla       0.154000   0.000000   0.154000 (  0.154000)
+DHeap 21 5000:lla       0.157000   0.000000   0.157000 (  0.157000)
+DHeap 22 5000:lla       0.153000   0.000000   0.153000 (  0.153000)
+DHeap 23 5000:lla       0.152000   0.000000   0.152000 (  0.152000)
+DHeap 24 5000:lla       0.158000   0.000000   0.158000 (  0.158000)
+DHeap 25 5000:lla       0.159000   0.000000   0.159000 (  0.160000)
+DHeap 26 5000:lla       0.156000   0.000000   0.156000 (  0.156000)
+DHeap 27 5000:lla       0.161000   0.000000   0.161000 (  0.161000)
+DHeap 28 5000:lla       0.160000   0.000000   0.160000 (  0.160000)
+DHeap 29 5000:lla       0.168000   0.000000   0.168000 (  0.168000)
+DHeap 30 5000:lla       0.155000   0.000000   0.155000 (  0.155000)
+DHeap 31 5000:lla       0.160000   0.000000   0.160000 (  0.160000)
+DHeap 32 5000:lla       0.213000   0.000000   0.213000 (  0.212000)
+DHeap 33 5000:lla       0.158000   0.000000   0.158000 (  0.158000)
+DHeap 34 5000:lla       0.163000   0.000000   0.163000 (  0.163000)
+DHeap 35 5000:lla       0.205000   0.000000   0.205000 (  0.205000)
+DHeap 36 5000:lla       0.158000   0.000000   0.158000 (  0.158000)
+DHeap 37 5000:lla       0.157000   0.000000   0.157000 (  0.157000)
+DHeap 38 5000:lla       0.158000   0.000000   0.158000 (  0.158000)
+DHeap 39 5000:lla       0.161000   0.000000   0.161000 (  0.161000)
+DHeap 40 5000:lla       0.155000   0.000000   0.155000 (  0.155000)
+DHeap 41 5000:lla       0.158000   0.000000   0.158000 (  0.158000)
+DHeap 42 5000:lla       0.160000   0.000000   0.160000 (  0.160000)
+DHeap 43 5000:lla       0.227000   0.000000   0.227000 (  0.227000)
+DHeap 44 5000:lla       0.187000   0.000000   0.187000 (  0.187000)
+DHeap 45 5000:lla       0.155000   0.000000   0.155000 (  0.155000)
+DHeap 46 5000:lla       0.158000   0.000000   0.158000 (  0.158000)
+DHeap 47 5000:lla       0.160000   0.000000   0.160000 (  0.160000)
+DHeap 48 5000:lla       0.162000   0.000000   0.162000 (  0.162000)
+DHeap 49 5000:lla       0.155000   0.000000   0.155000 (  0.155000)
+DHeap 50 5000:lla       0.157000   0.000000   0.157000 (  0.157000)
+\end{verbatim}
+\normalsize
+Ja jotta rspec toimisi jrubyllä oikein, tulee rspec ajaa seuraavalla komennolla: \emph{ruby --1.9 -S rspec benchmark/}
 
 \subsection{Dokumentaation generointi}
 Rdoc dokumentaation saa generoituta komennolla \emph{rdoc --main d\_heap.rb} kansiossa  \emph{heaps/Heap/src/}.
