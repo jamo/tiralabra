@@ -3,7 +3,6 @@
 
 #D-keko, keko jolla on d lasta.
 
-require 'pp'
 class DHeap
   #heap on taulukko, johon keon elementit kootaan
   #d on keon yksittäisen elementin lasten määrä
@@ -130,14 +129,13 @@ class DHeap
   # @param [Fixnum] index, indeksi josta lähdetään liikkeelle
   def heapify_down index
     if has_bigger_childen? index
-      #puts "sisalla hepify_downissa #{index}"
-      #pp index
       indexes = get_index_of_biggest_child index
       return unless indexes # jos childs_index on nil tai false returnataan
       swap index, indexes
       heapify_down indexes
     end
   end
+  
   ##
   # Katsotaan onko indeksissä olevalla itseään suurempia lapsia
   # Hyödynnetään kekoehdon ylläpidossa

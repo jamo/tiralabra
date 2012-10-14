@@ -58,6 +58,12 @@ Kerrottu toteutusdokumentissa.
 \subsection{Sovellus ei toimi kunnolla/koneessani on väärä ruby versio}
 Oikean rubyversion asentaminen omalle koneelleen on helppoa, eikä se vaadi edes sen kummempia käyttöoikeuksia. \url{https://rvm.io/rvm/install/} \\
 En kuitenkaan käsittele tässä sen tarkemmin sen asentamista.
-
-
+\subsection{Ohjelman ajaminen laitoksen koneilla}
+Ohjelma vaatii vähintään ruby 1.9 version, jota laitoksen koneilla ei suoraan ole. Sen saa kuitenkin helposti asennettua (ilman root oikeuksia) käyttämällä RVM:ää
+\url{https://rvm.io/rvm/install/}
+\emph{\\curl -L https://get.rvm.io | bash -s stable --ruby}
+Yllä olevan komennon pitäisi asentaa ruby 1.9.3p194, jolla ohjelma toimii.
+Joudut kuitenkin kertomaan kometoriville että se käyttää rvm:n kautta asennettua rubyä, etkä koneella valmiiksi olevaa. \emph{rvm use 1.9.3-p194} 
+\\
+Testien ajaminen vaatii gemin rspec asentamisen \emph{gem install rspec}
 \end{document}
