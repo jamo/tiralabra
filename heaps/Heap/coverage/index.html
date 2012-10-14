@@ -23,7 +23,7 @@
       <img src="./assets/0.5.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-10-07T18:56:45+03:00">2012-10-07T18:56:45+03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-10-14T22:00:54+03:00">2012-10-14T22:00:54+03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -34,15 +34,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         24425.18
+         24136.72
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>209</b> relevant lines. 
-    <span class="green"><b>209</b> lines covered</span> and
+    <b>208</b> relevant lines. 
+    <span class="green"><b>208</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -92,11 +92,11 @@
       <tr>
         <td class="strong"><a href="#7c3289e43b24f9f4d9312a1497f6382a992801c0" class="src_link" title="src/d_heap.rb">src/d_heap.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>199</td>
-        <td>77</td>
-        <td>77</td>
+        <td>197</td>
+        <td>76</td>
+        <td>76</td>
         <td>0</td>
-        <td>120974.4</td>
+        <td>119532.1</td>
       </tr>
       
       <tr>
@@ -1432,8 +1432,8 @@
     <h3>src/d_heap.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>77</b> relevant lines. 
-      <span class="green"><b>77</b> lines covered</span> and
+      <b>76</b> relevant lines. 
+      <span class="green"><b>76</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1474,1162 +1474,1150 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">require 'pp'</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
           <code class="ruby">class DHeap</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">  #heap on taulukko, johon keon elementit kootaan</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">  #d on keon yksittäisen elementin lasten määrä</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">  attr_accessor :heap, :d</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">  #Alustetaan keon oleellisimat komponentit</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">  # @param [Fixnum]  lasten määrä</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">  def initialize d</code>
         </li>
       
-        <li class="covered" data-hits="85" data-linenumber="15">
+        <li class="covered" data-hits="85" data-linenumber="14">
           <span class="hits">85</span>
           
           <code class="ruby">    @heap, @d = Array.new, d</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Palauttaa parentin indexin</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby">  # Palauttaa parentin indexin</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby">  #</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
           <code class="ruby">  # @param [Fixnum]  parentin indeksin laskentaan</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">  def parent_index index</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">    ##poikkeustapaus - haetaan indeksissä 0 olevan parenttia</code>
         </li>
       
-        <li class="covered" data-hits="66459" data-linenumber="23">
-          <span class="hits">66459</span>
+        <li class="covered" data-hits="57536" data-linenumber="22">
+          <span class="hits">57536</span>
           
           <code class="ruby">    return 0 if index == 0 </code>
         </li>
       
-        <li class="covered" data-hits="66459" data-linenumber="24">
-          <span class="hits">66459</span>
+        <li class="covered" data-hits="57536" data-linenumber="23">
+          <span class="hits">57536</span>
           
           <code class="ruby">    ((index-1).to_f/@d).floor</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  ##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby">  ##</code>
+          <code class="ruby">  # Palauttaa lasten indeksivälin jota voidaan hyödyntää lasten läpikäynnisä</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">  # Palauttaa lasten indeksivälin jota voidaan hyödyntää lasten läpikäynnisä</code>
+          <code class="ruby">  # luku..toinen_luku</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">  # luku..toinen_luku</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
           <code class="ruby">  # @param [Fixnum]  indeksi, jonka lasten väli lasketaan</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
           
           <code class="ruby">  def child_index index</code>
         </li>
       
-        <li class="covered" data-hits="602412" data-linenumber="32">
-          <span class="hits">602412</span>
+        <li class="covered" data-hits="554442" data-linenumber="31">
+          <span class="hits">554442</span>
           
           <code class="ruby">    child_index_left(index) .. child_index_right(index) #n on keon solmujen määrä</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  ##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">  ##</code>
+          <code class="ruby">  # Palauttaa vasemmal lapsen indeksin</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby">  # Palauttaa vasemmal lapsen indeksin</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
           <code class="ruby">  # @param [Fixnum] indeksi, jonka lapsen indeksi lasketaan</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
+        <li class="covered" data-hits="1" data-linenumber="37">
           <span class="hits">1</span>
           
           <code class="ruby">  def child_index_left index</code>
         </li>
       
-        <li class="covered" data-hits="868475" data-linenumber="39">
-          <span class="hits">868475</span>
+        <li class="covered" data-hits="796520" data-linenumber="38">
+          <span class="hits">796520</span>
           
           <code class="ruby">    [@d * index + 1, @heap.length-1].min</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  ##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby">  ##</code>
+          <code class="ruby">  # Palauttaa vasemman lapsen indeksin</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">  # Palauttaa vasemman lapsen indeksin</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="44">
-          
-          
           <code class="ruby">  # @param [Fixnum]  indeksi, jonka oikea indeksi lasketaan</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
           <code class="ruby">  def child_index_right index</code>
         </li>
       
-        <li class="covered" data-hits="868475" data-linenumber="46">
-          <span class="hits">868475</span>
+        <li class="covered" data-hits="796520" data-linenumber="45">
+          <span class="hits">796520</span>
           
           <code class="ruby">    [@d*index+@d, @heap.length-1].min</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="48">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  ##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">  ##</code>
+          <code class="ruby">  # Metodi, joka lisää alkioita heap taulukkoon.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
           
           
-          <code class="ruby">  # Metodi, joka lisää alkioita heap taulukkoon.</code>
+          <code class="ruby">  # Voidaan kutsua myös sorituksen aikana.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby">  # Voidaan kutsua myös sorituksen aikana.</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
-          
-          
           <code class="ruby">  # @param [Array]  n klp argumenttejä. jotka lisätään taulukkoon.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="53">
+        <li class="covered" data-hits="1" data-linenumber="52">
           <span class="hits">1</span>
           
           <code class="ruby">  def heapify *seed #saadaan</code>
         </li>
       
-        <li class="covered" data-hits="35216" data-linenumber="54">
+        <li class="covered" data-hits="35216" data-linenumber="53">
           <span class="hits">35216</span>
           
           <code class="ruby">    seed.each do |e|</code>
         </li>
       
-        <li class="covered" data-hits="35300" data-linenumber="55">
+        <li class="covered" data-hits="35300" data-linenumber="54">
           <span class="hits">35300</span>
           
           <code class="ruby">      @heap.push e</code>
         </li>
       
-        <li class="covered" data-hits="35300" data-linenumber="56">
+        <li class="covered" data-hits="35300" data-linenumber="55">
           <span class="hits">35300</span>
           
           <code class="ruby">      heapify_up(@heap.length-1)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="58">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby">  # Luodaan metodi insert, alias joka ohjaa kutsin heapify-metdille. </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
           
           
-          <code class="ruby">  # Luodaan metodi insert, alias joka ohjaa kutsin heapify-metdille. </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="61">
-          
-          
           <code class="ruby">  # joka lopulta tekee oleelliset operaatiot</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="62">
+        <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
           
           <code class="ruby">  alias :insert :heapify</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">  ##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
           
           
-          <code class="ruby">  ##</code>
+          <code class="ruby">  # Poistaa ja palauttaa suurimman arvon omaavan elementin keosta</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby">  # Poistaa ja palauttaa suurimman arvon omaavan elementin keosta</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="66">
-          
-          
           <code class="ruby">  # Huolehtii kekoehdon toiminnasta</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="67">
+        <li class="covered" data-hits="1" data-linenumber="66">
           <span class="hits">1</span>
           
           <code class="ruby">  def remove_max</code>
         </li>
       
-        <li class="covered" data-hits="35208" data-linenumber="68">
+        <li class="covered" data-hits="35208" data-linenumber="67">
           <span class="hits">35208</span>
           
           <code class="ruby">    return nil if heap.empty?</code>
         </li>
       
-        <li class="covered" data-hits="35208" data-linenumber="69">
+        <li class="covered" data-hits="35208" data-linenumber="68">
           <span class="hits">35208</span>
           
           <code class="ruby">    deleted = @heap.delete_at 0</code>
         </li>
       
-        <li class="covered" data-hits="35208" data-linenumber="70">
+        <li class="covered" data-hits="35208" data-linenumber="69">
           <span class="hits">35208</span>
           
           <code class="ruby">    last_one = @heap.pop</code>
         </li>
       
-        <li class="covered" data-hits="35208" data-linenumber="71">
+        <li class="covered" data-hits="35208" data-linenumber="70">
           <span class="hits">35208</span>
           
           <code class="ruby">    if last_one #ei ole false tai nil</code>
         </li>
       
-        <li class="covered" data-hits="35141" data-linenumber="72">
+        <li class="covered" data-hits="35141" data-linenumber="71">
           <span class="hits">35141</span>
           
           <code class="ruby">      @heap.insert 0, last_one</code>
         </li>
       
-        <li class="covered" data-hits="35141" data-linenumber="73">
+        <li class="covered" data-hits="35141" data-linenumber="72">
           <span class="hits">35141</span>
           
           <code class="ruby">      heapify_down 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="never" data-hits="" data-linenumber="73">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="35208" data-linenumber="75">
+        <li class="covered" data-hits="35208" data-linenumber="74">
           <span class="hits">35208</span>
           
           <code class="ruby">    deleted</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="never" data-hits="" data-linenumber="76">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="78">
+        <li class="covered" data-hits="1" data-linenumber="77">
           <span class="hits">1</span>
           
           <code class="ruby">  alias :pop :remove_max</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="79">
+        <li class="never" data-hits="" data-linenumber="78">
           
           
           <code class="ruby">  ##</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby">  # Kasvattaa avaimen arvoa tietyssä indeksissä</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="81">
+        <li class="never" data-hits="" data-linenumber="80">
           
           
           <code class="ruby">  # Mikäli uusi arvo on pienempi kuin uusi arvo ei tehdä mitään</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="never" data-hits="" data-linenumber="81">
           
           
           <code class="ruby">  # @param [Fixnum] new_value uusi arvo joka muutetaan vanhan tilalle</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
+        <li class="never" data-hits="" data-linenumber="82">
           
           
           <code class="ruby">  # @param [Fixnum] index, indeksi jossa olevaa avainta muutetaan</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="84">
+        <li class="covered" data-hits="1" data-linenumber="83">
           <span class="hits">1</span>
           
           <code class="ruby">  def inc_key new_value, index</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="85">
+        <li class="covered" data-hits="4" data-linenumber="84">
           <span class="hits">4</span>
           
           <code class="ruby">    return nil unless @heap[index]</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="86">
+        <li class="covered" data-hits="2" data-linenumber="85">
           <span class="hits">2</span>
           
           <code class="ruby">    if @heap[index] &lt; new_value</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="87">
+        <li class="covered" data-hits="2" data-linenumber="86">
           <span class="hits">2</span>
           
           <code class="ruby">      @heap[index] = new_value</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="88">
+        <li class="covered" data-hits="2" data-linenumber="87">
           <span class="hits">2</span>
           
           <code class="ruby">      heapify_up index</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="never" data-hits="" data-linenumber="88">
           
           
           <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="90">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="91">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  ##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="92">
           
           
-          <code class="ruby">  ##</code>
+          <code class="ruby">  # Pienentää avaimen arvoa tietyssä indeksissä</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="93">
           
           
-          <code class="ruby">  # Pienentää avaimen arvoa tietyssä indeksissä</code>
+          <code class="ruby">  # Mikäli uusi arvo on suurempi kuin uusi arvo ei tehdä mitään</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="94">
           
           
-          <code class="ruby">  # Mikäli uusi arvo on suurempi kuin uusi arvo ei tehdä mitään</code>
+          <code class="ruby">  # @param [Fixnum] new_value uusi arvo joka muutetaan vanhan tilalle</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="95">
           
           
-          <code class="ruby">  # @param [Fixnum] new_value uusi arvo joka muutetaan vanhan tilalle</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="96">
-          
-          
           <code class="ruby">  # @param [Fixnum] index, indeksi jossa olevaa avainta muutetaan</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="97">
+        <li class="covered" data-hits="1" data-linenumber="96">
           <span class="hits">1</span>
           
           <code class="ruby">  def dec_key new_value, index</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="98">
+        <li class="covered" data-hits="4" data-linenumber="97">
           <span class="hits">4</span>
           
           <code class="ruby">    return nil unless @heap[index]</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="99">
+        <li class="covered" data-hits="2" data-linenumber="98">
           <span class="hits">2</span>
           
           <code class="ruby">    if @heap[index] &gt; new_value</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="100">
+        <li class="covered" data-hits="2" data-linenumber="99">
           <span class="hits">2</span>
           
           <code class="ruby">      @heap[index] = new_value</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="101">
+        <li class="covered" data-hits="2" data-linenumber="100">
           <span class="hits">2</span>
           
           <code class="ruby">      heapify_down index</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="102">
+        <li class="never" data-hits="" data-linenumber="101">
           
           
           <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="103">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="104">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  ##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="105">
           
           
-          <code class="ruby">  ##</code>
+          <code class="ruby">  # Vaihtaa kahden elementin paikan</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="106">
           
           
-          <code class="ruby">  # Vaihtaa kahden elementin paikan</code>
+          <code class="ruby">  # @param [Fixnum] ekan indeksi</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="107">
           
           
-          <code class="ruby">  # @param [Fixnum] ekan indeksi</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="108">
-          
-          
           <code class="ruby">  # @param [Fixnum] tokan indeksi. Näiden indeksien sisältämät Objektit vaihdetaan päittäin</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="109">
+        <li class="covered" data-hits="1" data-linenumber="108">
           <span class="hits">1</span>
           
           <code class="ruby">  def swap(first_index, second_index)</code>
         </li>
       
-        <li class="covered" data-hits="297600" data-linenumber="110">
-          <span class="hits">297600</span>
+        <li class="covered" data-hits="264695" data-linenumber="109">
+          <span class="hits">264695</span>
           
           <code class="ruby">    @heap[first_index], @heap[second_index] = @heap[second_index], @heap[first_index]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="111">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="112">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Korjataan kekoehto/tarkastetaan sen olemassaolo</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="113">
           
           
-          <code class="ruby">  # Korjataan kekoehto/tarkastetaan sen olemassaolo</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="114">
-          
-          
           <code class="ruby">  # @param [Fixnum] index indeksi josta alaspäin kekoehto korjataan</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="115">
+        <li class="covered" data-hits="1" data-linenumber="114">
           <span class="hits">1</span>
           
           <code class="ruby">  def heapify_up index</code>
         </li>
       
-        <li class="covered" data-hits="66839" data-linenumber="116">
-          <span class="hits">66839</span>
+        <li class="covered" data-hits="57919" data-linenumber="115">
+          <span class="hits">57919</span>
           
           <code class="ruby">    if index != 0 #on parent olemassa TODO</code>
         </li>
       
-        <li class="covered" data-hits="66459" data-linenumber="117">
-          <span class="hits">66459</span>
+        <li class="covered" data-hits="57536" data-linenumber="116">
+          <span class="hits">57536</span>
           
           <code class="ruby">      parent_i = parent_index index</code>
         </li>
       
-        <li class="covered" data-hits="66459" data-linenumber="118">
-          <span class="hits">66459</span>
+        <li class="covered" data-hits="57536" data-linenumber="117">
+          <span class="hits">57536</span>
           
           <code class="ruby">      if @heap[parent_i] &lt; @heap[index]</code>
         </li>
       
-        <li class="covered" data-hits="31537" data-linenumber="119">
-          <span class="hits">31537</span>
+        <li class="covered" data-hits="22617" data-linenumber="118">
+          <span class="hits">22617</span>
           
           <code class="ruby">        swap(index, parent_i)</code>
         </li>
       
-        <li class="covered" data-hits="31537" data-linenumber="120">
-          <span class="hits">31537</span>
+        <li class="covered" data-hits="22617" data-linenumber="119">
+          <span class="hits">22617</span>
           
           <code class="ruby">        heapify_up(parent_i)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="121">
+        <li class="never" data-hits="" data-linenumber="120">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="122">
+        <li class="never" data-hits="" data-linenumber="121">
           
           
           <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="122">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="123">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="124">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  ##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="125">
           
           
-          <code class="ruby">  ##</code>
+          <code class="ruby">  # Tarkistaa ja tarvittaessa korjaa kekoehdon paremetrina saadusa indeksillä olevassa arvossa.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="126">
           
           
-          <code class="ruby">  # Tarkistaa ja tarvittaessa korjaa kekoehdon paremetrina saadusa indeksillä olevassa arvossa.</code>
+          <code class="ruby">  # Kutsuttaessa tarkastetaan onko elementillä lapsia,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="127">
           
           
-          <code class="ruby">  # Kutsuttaessa tarkastetaan onko elementillä lapsia,</code>
+          <code class="ruby">  # joiden arvo on suurempi kuin niiden parentin arvo</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="128">
           
           
-          <code class="ruby">  # joiden arvo on suurempi kuin niiden parentin arvo</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="129">
           
           
-          <code class="ruby">  #</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="130">
-          
-          
           <code class="ruby">  # @param [Fixnum] index, indeksi josta lähdetään liikkeelle</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="131">
+        <li class="covered" data-hits="1" data-linenumber="130">
           <span class="hits">1</span>
           
           <code class="ruby">  def heapify_down index</code>
         </li>
       
-        <li class="covered" data-hits="301206" data-linenumber="132">
-          <span class="hits">301206</span>
+        <li class="covered" data-hits="277221" data-linenumber="131">
+          <span class="hits">277221</span>
           
           <code class="ruby">    if has_bigger_childen? index</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="133">
-          
-          
-          <code class="ruby">      #puts &quot;sisalla hepify_downissa #{index}&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="134">
-          
-          
-          <code class="ruby">      #pp index</code>
-        </li>
-      
-        <li class="covered" data-hits="266063" data-linenumber="135">
-          <span class="hits">266063</span>
+        <li class="covered" data-hits="242078" data-linenumber="132">
+          <span class="hits">242078</span>
           
           <code class="ruby">      indexes = get_index_of_biggest_child index</code>
         </li>
       
-        <li class="covered" data-hits="266063" data-linenumber="136">
-          <span class="hits">266063</span>
+        <li class="covered" data-hits="242078" data-linenumber="133">
+          <span class="hits">242078</span>
           
           <code class="ruby">      return unless indexes # jos childs_index on nil tai false returnataan</code>
         </li>
       
-        <li class="covered" data-hits="266063" data-linenumber="137">
-          <span class="hits">266063</span>
+        <li class="covered" data-hits="242078" data-linenumber="134">
+          <span class="hits">242078</span>
           
           <code class="ruby">      swap index, indexes</code>
         </li>
       
-        <li class="covered" data-hits="266063" data-linenumber="138">
-          <span class="hits">266063</span>
+        <li class="covered" data-hits="242078" data-linenumber="135">
+          <span class="hits">242078</span>
           
           <code class="ruby">      heapify_down indexes</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="136">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="137">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="138">
+          
+          
+          <code class="ruby">  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="139">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">  ##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="140">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  # Katsotaan onko indeksissä olevalla itseään suurempia lapsia</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="141">
           
           
-          <code class="ruby">  ##</code>
+          <code class="ruby">  # Hyödynnetään kekoehdon ylläpidossa</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="142">
           
           
-          <code class="ruby">  # Katsotaan onko indeksissä olevalla itseään suurempia lapsia</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="143">
-          
-          
-          <code class="ruby">  # Hyödynnetään kekoehdon ylläpidossa</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="144">
-          
-          
           <code class="ruby">  # @param [Fixnum] index, indeksi</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="145">
+        <li class="covered" data-hits="1" data-linenumber="143">
           <span class="hits">1</span>
           
           <code class="ruby">  def has_bigger_childen? index</code>
         </li>
       
-        <li class="covered" data-hits="301206" data-linenumber="146">
-          <span class="hits">301206</span>
+        <li class="covered" data-hits="277221" data-linenumber="144">
+          <span class="hits">277221</span>
           
           <code class="ruby">    childs = []#Hash.new</code>
         </li>
       
-        <li class="covered" data-hits="301206" data-linenumber="147">
-          <span class="hits">301206</span>
+        <li class="covered" data-hits="277221" data-linenumber="145">
+          <span class="hits">277221</span>
           
           <code class="ruby">    for i in child_index index</code>
         </li>
       
-        <li class="covered" data-hits="1032294" data-linenumber="148">
-          <span class="hits">1032294</span>
+        <li class="covered" data-hits="1228543" data-linenumber="146">
+          <span class="hits">1228543</span>
           
           <code class="ruby">      childs &lt;&lt; @heap[i]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="147">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="277221" data-linenumber="148">
+          <span class="hits">277221</span>
+          
+          <code class="ruby">    nil if childs == [] or childs == nil or (child_index(index)).max == @heap.length</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="149">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">    #@heap[childs.values.max]</code>
         </li>
       
-        <li class="covered" data-hits="301206" data-linenumber="150">
-          <span class="hits">301206</span>
+        <li class="covered" data-hits="277221" data-linenumber="150">
+          <span class="hits">277221</span>
           
-          <code class="ruby">    nil if childs == [] or childs == nil or (child_index(index)).max == @heap.length</code>
+          <code class="ruby">    @heap[index] &lt; childs.max</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="151">
           
           
-          <code class="ruby">    #@heap[childs.values.max]</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="301206" data-linenumber="152">
-          <span class="hits">301206</span>
+        <li class="never" data-hits="" data-linenumber="152">
           
-          <code class="ruby">    @heap[index] &lt; childs.max</code>
+          
+          <code class="ruby">  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="153">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  # Palauttaa suurimman lapsen indeksin</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="154">
           
           
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="155">
-          
-          
-          <code class="ruby">  # Palauttaa suurimman lapsen indeksin</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="156">
-          
-          
           <code class="ruby">  # @param [Fixnum] index, indeksi</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="157">
+        <li class="covered" data-hits="1" data-linenumber="155">
           <span class="hits">1</span>
           
           <code class="ruby">  def get_index_of_biggest_child index</code>
         </li>
       
-        <li class="covered" data-hits="266063" data-linenumber="158">
-          <span class="hits">266063</span>
+        <li class="covered" data-hits="242078" data-linenumber="156">
+          <span class="hits">242078</span>
           
           <code class="ruby">    childs = []</code>
         </li>
       
-        <li class="covered" data-hits="266063" data-linenumber="159">
-          <span class="hits">266063</span>
+        <li class="covered" data-hits="242078" data-linenumber="157">
+          <span class="hits">242078</span>
           
           <code class="ruby">    left_index = child_index_left(index)</code>
         </li>
       
-        <li class="covered" data-hits="266063" data-linenumber="160">
-          <span class="hits">266063</span>
+        <li class="covered" data-hits="242078" data-linenumber="158">
+          <span class="hits">242078</span>
           
           <code class="ruby">    right_index = child_index_right(index)</code>
         </li>
       
-        <li class="covered" data-hits="266063" data-linenumber="161">
-          <span class="hits">266063</span>
+        <li class="covered" data-hits="242078" data-linenumber="159">
+          <span class="hits">242078</span>
           
           <code class="ruby">    for i in left_index..right_index</code>
         </li>
       
-        <li class="covered" data-hits="997130" data-linenumber="162">
-          <span class="hits">997130</span>
+        <li class="covered" data-hits="1193320" data-linenumber="160">
+          <span class="hits">1193320</span>
           
           <code class="ruby">      childs &lt;&lt; @heap[i]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="163">
+        <li class="never" data-hits="" data-linenumber="161">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="266063" data-linenumber="164">
-          <span class="hits">266063</span>
+        <li class="covered" data-hits="242078" data-linenumber="162">
+          <span class="hits">242078</span>
           
           <code class="ruby">    childs.index(childs.max)+left_index</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="164">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="165">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="166">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="167">
-          
-          
           <code class="ruby">  #Palautaa tiedon onko keko tyhjä</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="168">
+        <li class="covered" data-hits="1" data-linenumber="166">
           <span class="hits">1</span>
           
           <code class="ruby">  def empty?</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="169">
+        <li class="covered" data-hits="8" data-linenumber="167">
           <span class="hits">8</span>
           
           <code class="ruby">    heap.empty?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="170">
+        <li class="never" data-hits="" data-linenumber="168">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="171">
+        <li class="never" data-hits="" data-linenumber="169">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="172">
+        <li class="never" data-hits="" data-linenumber="170">
           
           
           <code class="ruby">  #Palauttaa tiedon onko keko ei tyhjä</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="173">
+        <li class="covered" data-hits="1" data-linenumber="171">
           <span class="hits">1</span>
           
           <code class="ruby">  def not_empty?</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="174">
+        <li class="covered" data-hits="7" data-linenumber="172">
           <span class="hits">7</span>
           
           <code class="ruby">    !empty?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="175">
+        <li class="never" data-hits="" data-linenumber="173">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="176">
+        <li class="never" data-hits="" data-linenumber="174">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="177">
+        <li class="never" data-hits="" data-linenumber="175">
           
           
           <code class="ruby">  #Tyhjentää kaikki elementit keosta</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="178">
+        <li class="covered" data-hits="1" data-linenumber="176">
           <span class="hits">1</span>
           
           <code class="ruby">  def clear!</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="179">
+        <li class="covered" data-hits="1" data-linenumber="177">
           <span class="hits">1</span>
           
           <code class="ruby">    heap.clear</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="180">
+        <li class="never" data-hits="" data-linenumber="178">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="181">
+        <li class="never" data-hits="" data-linenumber="179">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="182">
+        <li class="never" data-hits="" data-linenumber="180">
           
           
           <code class="ruby">  #Asettaa keon taulukoksi parametrina annetun taulukon</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="183">
+        <li class="never" data-hits="" data-linenumber="181">
           
           
           <code class="ruby">  #Tämä olettaa että taulukko noudattaa kyseisen keon kekoehtoa.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="184">
+        <li class="covered" data-hits="1" data-linenumber="182">
           <span class="hits">1</span>
           
           <code class="ruby">  def inject_heap new_heap</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="185">
+        <li class="covered" data-hits="1" data-linenumber="183">
           <span class="hits">1</span>
           
           <code class="ruby">    @heap = new_heap</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="186">
+        <li class="never" data-hits="" data-linenumber="184">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="187">
+        <li class="never" data-hits="" data-linenumber="185">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="188">
+        <li class="never" data-hits="" data-linenumber="186">
           
           
           <code class="ruby">  #Näyttää mitä indeksissä 0 on</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="189">
+        <li class="never" data-hits="" data-linenumber="187">
           
           
           <code class="ruby">  #palauttaa nil jos taulukko on tyhjä</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="190">
+        <li class="covered" data-hits="1" data-linenumber="188">
           <span class="hits">1</span>
           
           <code class="ruby">  def peak</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="191">
+        <li class="covered" data-hits="1" data-linenumber="189">
           <span class="hits">1</span>
           
           <code class="ruby">    @heap[0]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="192">
+        <li class="never" data-hits="" data-linenumber="190">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="193">
+        <li class="never" data-hits="" data-linenumber="191">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="194">
+        <li class="never" data-hits="" data-linenumber="192">
           
           
           <code class="ruby">  #Palauttaa viitteen kekon taulukkoon</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="195">
+        <li class="covered" data-hits="1" data-linenumber="193">
           <span class="hits">1</span>
           
           <code class="ruby">  def get_heap</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="196">
+        <li class="covered" data-hits="8" data-linenumber="194">
           <span class="hits">8</span>
           
           <code class="ruby">    @heap</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="197">
+        <li class="never" data-hits="" data-linenumber="195">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="198">
+        <li class="never" data-hits="" data-linenumber="196">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="199">
+        <li class="never" data-hits="" data-linenumber="197">
           
           
           <code class="ruby">end</code>
